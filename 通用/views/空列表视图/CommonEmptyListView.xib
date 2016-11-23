@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="OOy-yb-UvM" customClass="CommonEmptyListView">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="546"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="空数据icon" translatesAutoresizingMaskIntoConstraints="NO" id="STw-to-RSX">
+                    <rect key="frame" x="120" y="168" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="CnX-aG-mlC"/>
+                        <constraint firstAttribute="width" constant="120" id="lue-oT-Tpe"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无数据" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYu-0w-h97">
+                    <rect key="frame" x="15" y="298" width="320" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="gog-YX-qKX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.52156862749999999" green="0.52156862749999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dYu-0w-h97" secondAttribute="trailing" constant="15" id="G8y-up-DVb"/>
+                <constraint firstAttribute="centerX" secondItem="STw-to-RSX" secondAttribute="centerX" constant="-5" id="IOs-iZ-uMb"/>
+                <constraint firstAttribute="centerY" secondItem="STw-to-RSX" secondAttribute="centerY" constant="45" id="MMO-4b-1OI"/>
+                <constraint firstItem="dYu-0w-h97" firstAttribute="top" secondItem="STw-to-RSX" secondAttribute="bottom" constant="10" id="cRE-jk-gNQ"/>
+                <constraint firstItem="dYu-0w-h97" firstAttribute="leading" secondItem="OOy-yb-UvM" secondAttribute="leading" constant="15" id="q8G-z6-xMe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="image" destination="STw-to-RSX" id="lS5-PS-dU7"/>
+                <outlet property="title" destination="dYu-0w-h97" id="fTq-bX-eTO"/>
+            </connections>
+            <point key="canvasLocation" x="415" y="399"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="空数据icon" width="128" height="128"/>
+    </resources>
+</document>

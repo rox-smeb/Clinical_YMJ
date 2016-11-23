@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MineHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYQ-xI-wZK">
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wo01" translatesAutoresizingMaskIntoConstraints="NO" id="exf-EY-hOU" userLabel="背景"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oG-b4-b7C">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="默认头像" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-yW-JEQ" userLabel="头像">
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="CEm-yW-JEQ" secondAttribute="height" multiplier="1:1" id="Syd-sQ-LZR"/>
+                                <constraint firstAttribute="width" constant="70" id="rKD-0i-mW8"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="4oG-b4-b7C" firstAttribute="top" secondItem="CEm-yW-JEQ" secondAttribute="bottom" constant="10" id="5vP-tn-axa"/>
+                        <constraint firstAttribute="trailing" secondItem="exf-EY-hOU" secondAttribute="trailing" id="7Oe-bc-fDu"/>
+                        <constraint firstAttribute="bottom" secondItem="exf-EY-hOU" secondAttribute="bottom" id="8WW-Et-4iM"/>
+                        <constraint firstItem="exf-EY-hOU" firstAttribute="leading" secondItem="cYQ-xI-wZK" secondAttribute="leading" id="BNV-ib-dfJ"/>
+                        <constraint firstItem="CEm-yW-JEQ" firstAttribute="centerY" secondItem="cYQ-xI-wZK" secondAttribute="centerY" constant="5" id="QKR-77-FsR"/>
+                        <constraint firstItem="exf-EY-hOU" firstAttribute="top" secondItem="cYQ-xI-wZK" secondAttribute="top" id="esT-YZ-LCS"/>
+                        <constraint firstItem="CEm-yW-JEQ" firstAttribute="centerX" secondItem="cYQ-xI-wZK" secondAttribute="centerX" id="ipS-vd-nsR"/>
+                        <constraint firstItem="4oG-b4-b7C" firstAttribute="centerX" secondItem="cYQ-xI-wZK" secondAttribute="centerX" id="lYx-an-RJt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cYQ-xI-wZK" secondAttribute="trailing" id="2RQ-eG-A9g"/>
+                <constraint firstItem="cYQ-xI-wZK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FzR-io-mPy"/>
+                <constraint firstAttribute="bottom" secondItem="cYQ-xI-wZK" secondAttribute="bottom" id="PVT-RS-f7q"/>
+                <constraint firstItem="cYQ-xI-wZK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fZX-RI-PZe"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bkImageView" destination="exf-EY-hOU" id="mHn-de-Sio"/>
+                <outlet property="userHeadImageView" destination="CEm-yW-JEQ" id="Jbi-ML-kKp"/>
+                <outlet property="userNickLabel" destination="4oG-b4-b7C" id="STz-bx-S2i"/>
+            </connections>
+            <point key="canvasLocation" x="313" y="384"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="wo01" width="361" height="195"/>
+        <image name="默认头像" width="63" height="63"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

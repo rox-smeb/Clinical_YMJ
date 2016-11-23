@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  车联网-修理厂端
+//
+//  Created by AnYanbo on 16/6/6.
+//  Copyright © 2016年 AnYanbo. All rights reserved.
+//
+
+#ifndef _____PrefixHeader_pch
+#define _____PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import <YBCommonKit/YBCommonKit.h>
+#import <YBCommonKit/MJRefresh.h>
+#import <YBCommonKit/SVProgressHUD.h>
+#import <YBCommonKit/MBProgressHUD.h>
+
+#import "MacroDefine.h"
+#import "AppURL.h"
+
+#import "CommonEmptyListView.h"
+
+#endif

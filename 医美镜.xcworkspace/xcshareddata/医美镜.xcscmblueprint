@@ -1,0 +1,49 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++53A73DD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++55E87F9" : {
+
+    },
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++16092E9" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++1E24974" : 9223372036854775807,
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++16092E9" : 9223372036854775807,
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++53A73DD" : 9223372036854775807,
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++55E87F9" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3AD8D598-8CDA-499C-9FD7-F59107B43572",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++1E24974" : "ymj\/",
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++16092E9" : "",
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++53A73DD" : "ymj%202\/",
+    "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++55E87F9" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "医美镜",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "医美镜.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/115.29.42.75:8898\/svn\/YDSVNios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++16092E9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rox-smeb\/ymj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++1E24974"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rox-smeb\/ymj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++53A73DD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/rox-smeb\/ymj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A44CC2CBFB73DF6EAFAEABC06ACBD85EC9B81989+++55E87F9"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VerDoctorFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9x-v9-3Bc">
+                    <rect key="frame" x="0.0" y="0.0" width="106" height="45"/>
+                    <color key="backgroundColor" red="0.94340945509999996" green="0.94340945509999996" blue="0.94340945509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="图文咨询">
+                        <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvx-dc-Zp0">
+                    <rect key="frame" x="107" y="0.0" width="106" height="45"/>
+                    <color key="backgroundColor" red="0.94340945509999996" green="0.94340945509999996" blue="0.94340945509999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="电话咨询">
+                        <color key="titleColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsF-sK-6e8">
+                    <rect key="frame" x="214" y="0.0" width="106" height="45"/>
+                    <color key="backgroundColor" red="1" green="0.53882250509999996" blue="0.68536976110000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="下单">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hsF-sK-6e8" secondAttribute="bottom" id="6aG-uH-aHQ"/>
+                <constraint firstItem="hsF-sK-6e8" firstAttribute="width" secondItem="wvx-dc-Zp0" secondAttribute="width" id="9Jn-Ee-lfZ"/>
+                <constraint firstItem="wvx-dc-Zp0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="HOO-X7-6ke"/>
+                <constraint firstItem="G9x-v9-3Bc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="J6k-bz-COS"/>
+                <constraint firstItem="hsF-sK-6e8" firstAttribute="leading" secondItem="wvx-dc-Zp0" secondAttribute="trailing" constant="1" id="PFO-jt-3qq"/>
+                <constraint firstAttribute="trailing" secondItem="hsF-sK-6e8" secondAttribute="trailing" id="UTk-eZ-Z1y"/>
+                <constraint firstAttribute="bottom" secondItem="wvx-dc-Zp0" secondAttribute="bottom" id="V3n-mQ-Zi4"/>
+                <constraint firstAttribute="bottom" secondItem="G9x-v9-3Bc" secondAttribute="bottom" id="XTE-vh-Cn0"/>
+                <constraint firstItem="hsF-sK-6e8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rTd-BP-vwX"/>
+                <constraint firstItem="wvx-dc-Zp0" firstAttribute="width" secondItem="G9x-v9-3Bc" secondAttribute="width" id="tis-PJ-si1"/>
+                <constraint firstItem="wvx-dc-Zp0" firstAttribute="leading" secondItem="G9x-v9-3Bc" secondAttribute="trailing" constant="1" id="vOA-fa-3Yh"/>
+                <constraint firstItem="G9x-v9-3Bc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="x3D-cE-NbE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="348" y="91.5"/>
+        </view>
+    </objects>
+</document>
