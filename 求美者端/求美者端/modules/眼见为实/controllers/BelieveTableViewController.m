@@ -21,7 +21,7 @@
 @end
 
 @implementation BelieveTableViewController
-
+// 视频播放
 + (instancetype)viewController
 {
     BelieveTableViewController* ctrl = [[self class] viewControllerWithStoryboardName:@"Believe"];
