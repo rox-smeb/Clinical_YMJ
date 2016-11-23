@@ -689,6 +689,7 @@
 				90E7669E1D599207008E6C82 /* 主体 */,
 				9022EC741D5C629100C826B5 /* 登陆 */,
 				90E766AE1D599207008E6C82 /* 首页 */,
+				DFF068241DE5533700E1C244 /* 眼见为实 */,
 				90E766A61D599207008E6C82 /* 我的 */,
 			);
 			path = modules;
@@ -1246,6 +1247,45 @@
 				DFE1EE4A1DD3030300227EB8 /* FaceLiftingTableViewCell.xib */,
 			);
 			name = "中国好整形";
+			sourceTree = "<group>";
+		};
+		DFF068241DE5533700E1C244 /* 眼见为实 */ = {
+			isa = PBXGroup;
+			children = (
+				DFF068251DE5533700E1C244 /* controllers */,
+				DFF068261DE5533700E1C244 /* models */,
+				DFF068271DE5533700E1C244 /* singleton */,
+				DFF068281DE5533700E1C244 /* views */,
+			);
+			path = "眼见为实";
+			sourceTree = "<group>";
+		};
+		DFF068251DE5533700E1C244 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		DFF068261DE5533700E1C244 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		DFF068271DE5533700E1C244 /* singleton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = singleton;
+			sourceTree = "<group>";
+		};
+		DFF068281DE5533700E1C244 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
