@@ -123,6 +123,8 @@
 		DF1C94D81D7687E5003D5114 /* HomeTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1C94D71D7687E5003D5114 /* HomeTableViewHeaderView.xib */; };
 		DF4077631DD2B5D000436FDF /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4077611DD2B5D000436FDF /* FunctionTableViewCell.m */; };
 		DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4077621DD2B5D000436FDF /* FunctionTableViewCell.xib */; };
+		DF5C36FA1DE5703D00082629 /* VideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C36F91DE5703D00082629 /* VideoInfo.m */; };
+		DF5C37021DE5777800082629 /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C37011DE5777800082629 /* PlayVideoViewController.m */; };
 		DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */; };
 		DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84F31D79527B006D7EB5 /* CommonInfo.m */; };
 		DF8F84FC1D795CD9006D7EB5 /* SecondLevelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84FB1D795CD9006D7EB5 /* SecondLevelListViewController.m */; };
@@ -147,6 +149,10 @@
 		DFE194661D7D618C00791F8D /* VerDoctorWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE194651D7D618C00791F8D /* VerDoctorWebViewController.m */; };
 		DFE1EE4B1DD3030300227EB8 /* FaceLiftingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1EE491DD3030300227EB8 /* FaceLiftingTableViewCell.m */; };
 		DFE1EE4C1DD3030300227EB8 /* FaceLiftingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE1EE4A1DD3030300227EB8 /* FaceLiftingTableViewCell.xib */; };
+		DFF0682C1DE561FA00E1C244 /* Believe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF0682B1DE561FA00E1C244 /* Believe.storyboard */; };
+		DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0682F1DE562C000E1C244 /* BelieveTableViewController.m */; };
+		DFF068341DE563F800E1C244 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF068321DE563F800E1C244 /* VideoTableViewCell.m */; };
+		DFF068351DE563F800E1C244 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -327,6 +333,10 @@
 		DF4077601DD2B5D000436FDF /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
 		DF4077611DD2B5D000436FDF /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
 		DF4077621DD2B5D000436FDF /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
+		DF5C36F81DE5703D00082629 /* VideoInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoInfo.h; sourceTree = "<group>"; };
+		DF5C36F91DE5703D00082629 /* VideoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoInfo.m; sourceTree = "<group>"; };
+		DF5C37001DE5777800082629 /* PlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoViewController.h; sourceTree = "<group>"; };
+		DF5C37011DE5777800082629 /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
 		DF8F84EE1D794F8B006D7EB5 /* CommonServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonServerInteraction.h; sourceTree = "<group>"; };
 		DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonServerInteraction.m; sourceTree = "<group>"; };
 		DF8F84F21D79527B006D7EB5 /* CommonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonInfo.h; path = "../../首页/models/CommonInfo.h"; sourceTree = "<group>"; };
@@ -368,6 +378,12 @@
 		DFE1EE481DD3030300227EB8 /* FaceLiftingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceLiftingTableViewCell.h; sourceTree = "<group>"; };
 		DFE1EE491DD3030300227EB8 /* FaceLiftingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceLiftingTableViewCell.m; sourceTree = "<group>"; };
 		DFE1EE4A1DD3030300227EB8 /* FaceLiftingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FaceLiftingTableViewCell.xib; sourceTree = "<group>"; };
+		DFF0682B1DE561FA00E1C244 /* Believe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Believe.storyboard; sourceTree = "<group>"; };
+		DFF0682E1DE562C000E1C244 /* BelieveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BelieveTableViewController.h; sourceTree = "<group>"; };
+		DFF0682F1DE562C000E1C244 /* BelieveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BelieveTableViewController.m; sourceTree = "<group>"; };
+		DFF068311DE563F800E1C244 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
+		DFF068321DE563F800E1C244 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
+		DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1168,6 +1184,15 @@
 			name = "首页功能cell";
 			sourceTree = "<group>";
 		};
+		DF5C36FC1DE576FD00082629 /* 视频播放 */ = {
+			isa = PBXGroup;
+			children = (
+				DF5C37001DE5777800082629 /* PlayVideoViewController.h */,
+				DF5C37011DE5777800082629 /* PlayVideoViewController.m */,
+			);
+			name = "视频播放";
+			sourceTree = "<group>";
+		};
 		DF8F84F91D795CCE006D7EB5 /* 城市列表选择 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1252,6 +1277,7 @@
 		DFF068241DE5533700E1C244 /* 眼见为实 */ = {
 			isa = PBXGroup;
 			children = (
+				DFF0682B1DE561FA00E1C244 /* Believe.storyboard */,
 				DFF068251DE5533700E1C244 /* controllers */,
 				DFF068261DE5533700E1C244 /* models */,
 				DFF068271DE5533700E1C244 /* singleton */,
@@ -1263,6 +1289,9 @@
 		DFF068251DE5533700E1C244 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF5C36FC1DE576FD00082629 /* 视频播放 */,
+				DFF0682E1DE562C000E1C244 /* BelieveTableViewController.h */,
+				DFF0682F1DE562C000E1C244 /* BelieveTableViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -1270,6 +1299,8 @@
 		DFF068261DE5533700E1C244 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				DF5C36F81DE5703D00082629 /* VideoInfo.h */,
+				DF5C36F91DE5703D00082629 /* VideoInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1284,6 +1315,9 @@
 		DFF068281DE5533700E1C244 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DFF068311DE563F800E1C244 /* VideoTableViewCell.h */,
+				DFF068321DE563F800E1C244 /* VideoTableViewCell.m */,
+				DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -1319,7 +1353,7 @@
 				TargetAttributes = {
 					909BEDC31D598095007D7A7E = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = DS523X9NKE;
+						DevelopmentTeam = QNYGZ6JJ24;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 0;
@@ -1385,6 +1419,7 @@
 				DF1C94D81D7687E5003D5114 /* HomeTableViewHeaderView.xib in Resources */,
 				90E76B361D59B816008E6C82 /* chart.js in Resources */,
 				90E769FE1D59B816008E6C82 /* UIPopoverDatePicker.xib in Resources */,
+				DFF068351DE563F800E1C244 /* VideoTableViewCell.xib in Resources */,
 				90E769F41D59B816008E6C82 /* Common.storyboard in Resources */,
 				90E76B2E1D59B816008E6C82 /* FontAwesome.otf in Resources */,
 				90E766B71D599207008E6C82 /* Main.storyboard in Resources */,
@@ -1408,6 +1443,7 @@
 				90E76B251D59B816008E6C82 /* bootstrap.css in Resources */,
 				90E76B341D59B816008E6C82 /* logo_white_bg.png in Resources */,
 				DFE1EE4C1DD3030300227EB8 /* FaceLiftingTableViewCell.xib in Resources */,
+				DFF0682C1DE561FA00E1C244 /* Believe.storyboard in Resources */,
 				909BEDD41D598095007D7A7E /* Assets.xcassets in Resources */,
 				DF96C81C1D7569F8001E5C12 /* GarageAbilityTableViewCell.xib in Resources */,
 				90CDCBA61D5D59E700FF2B6D /* InputAccessoryView.xib in Resources */,
@@ -1430,6 +1466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5C37021DE5777800082629 /* PlayVideoViewController.m in Sources */,
 				90E76B611D59B831008E6C82 /* WXUtil.mm in Sources */,
 				90E766BB1D599207008E6C82 /* HomeServerInteraction.m in Sources */,
 				DF8F85041D7963E3006D7EB5 /* CommonSelectTableSectionHeader.m in Sources */,
@@ -1449,10 +1486,12 @@
 				9022EC5D1D5B0D0100C826B5 /* HomeTableViewController.m in Sources */,
 				9022EC7D1D5C66EA00C826B5 /* LoginTableViewController.m in Sources */,
 				905383671D65C53C007D722E /* ApplyFailRepairTableViewController.m in Sources */,
+				DF5C36FA1DE5703D00082629 /* VideoInfo.m in Sources */,
 				DFE1945D1D7D56D300791F8D /* VerDoctorWebTableViewCell.m in Sources */,
 				186A1A041DDECD28001562CA /* ApplyConsultationViewController.m in Sources */,
 				DF8F84FC1D795CD9006D7EB5 /* SecondLevelListViewController.m in Sources */,
 				90E76B601D59B831008E6C82 /* payRequsestHandler.mm in Sources */,
+				DFF068341DE563F800E1C244 /* VideoTableViewCell.m in Sources */,
 				DFE194611D7D574600791F8D /* VerDoctorFooterView.m in Sources */,
 				900B00A61D5AE837003810C5 /* TabBarCenterView.m in Sources */,
 				DF13AABC1D7E63BB0062D35D /* VerifyFrameWorkTableViewController.m in Sources */,
@@ -1471,6 +1510,7 @@
 				90E76B971D59C2F7008E6C82 /* CommonEmptyListView.m in Sources */,
 				90CDCBAE1D5D5CC300FF2B6D /* ForgetPasswordTableViewController.m in Sources */,
 				183C312A1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.m in Sources */,
+				DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */,
 				90B56ECB1D62DC7E00E4232B /* ImagePickerManager.m in Sources */,
 				90E76B5F1D59B831008E6C82 /* ApiXml.mm in Sources */,
 				90AD75711D6163F300CB7661 /* LoginServerInteraction.m in Sources */,
@@ -1595,6 +1635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QNYGZ6JJ24;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1608,6 +1649,7 @@
 					"$(SRCROOT)/../通用/3thpart/Alipay/",
 				);
 				INFOPLIST_FILE = "求美者端/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1627,6 +1669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QNYGZ6JJ24;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1640,6 +1683,7 @@
 					"$(SRCROOT)/../通用/3thpart/Alipay/",
 				);
 				INFOPLIST_FILE = "求美者端/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

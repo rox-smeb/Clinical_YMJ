@@ -106,7 +106,6 @@
     {
         NSString* className = [navController restorationIdentifier];
         
-        // 首页 | 想去 | 我的
         if (className != nil && [className isEqualToString:@""] == NO)
         {
             Class class = NSClassFromString(className);

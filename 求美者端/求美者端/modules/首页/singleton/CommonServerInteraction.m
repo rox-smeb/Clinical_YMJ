@@ -75,4 +75,23 @@ static CommonServerInteraction *SINGLETON = nil;
       responseBlock:responseBlock];
     
 }
+
+#pragma mark - 获取视频列表
+- (void)findVideowithSortId:(NSString*)sort_id
+                     newset:(NSString*)newset
+              responseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    [param addParam:sort_id forKey:@"sort_id"];
+    [param addParam:newset forKey:@"newset"];
+    
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"findVideo"]
+             method:GET
+       responseType:RESPONSE_INFO_LIST
+          itemClass:[VideoInfo class]
+             params:param
+      responseBlock:responseBlock];
+
+}
+
 @end

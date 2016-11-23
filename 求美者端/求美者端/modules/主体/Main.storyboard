@@ -35,7 +35,7 @@
                         <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fBH-1c-imu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fBH-1c-imu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -52,7 +52,7 @@
                     <tabBarItem key="tabBarItem" title="" image="TabItem3_nor" id="aBh-N3-YxC">
                         <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="emC-ZQ-TWV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="emC-ZQ-TWV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -64,11 +64,11 @@
         <!--眼见为实-->
         <scene sceneID="171-tj-dWg">
             <objects>
-                <navigationController id="VbW-Rt-86T" userLabel="眼见为实" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="BelieveTableViewController" id="VbW-Rt-86T" userLabel="眼见为实" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="TabItem2_nor" id="GpH-pI-VP2">
                         <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="-8"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hu4-ad-QYg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hu4-ad-QYg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
