@@ -598,8 +598,8 @@
         [self.superview addSubview:_buttomImageView];
   
         NSInteger num = [_leftTableView numberOfRowsInSection:0];
-        CGFloat tableViewHeight = num * kTableViewCellHeight > _dropMenuHeight + 1 ? _dropMenuHeight : num * kTableViewCellHeight + 1;
-        
+//        CGFloat tableViewHeight = num * kTableViewCellHeight > _dropMenuHeight + 1 ? _dropMenuHeight : num * kTableViewCellHeight + 1;
+        CGFloat tableViewHeight=300;
         [UIView animateWithDuration:0.2 animations:^{
             if (haveItems) {
                  _leftTableView.frame = CGRectMake(self.origin.x, self.frame.origin.y + self.frame.size.height, self.frame.size.width/2, tableViewHeight);

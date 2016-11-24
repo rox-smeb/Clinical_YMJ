@@ -11,7 +11,7 @@
 #import "FindDisplayInfo.h"
 #import "FindSpecialInfo.h"
 #import "VideoInfo.h"
-
+#import "FindClassifyInfo.h"
 @interface CommonServerInteraction : YBServerInteraction
 
 + (CommonServerInteraction*)sharedInstance;
@@ -24,6 +24,14 @@
  *  @param responseBlock 成功回调 (CommonInfo)
  */
 - (void)findProvinceResponseBlock:(YBResponseBlock)responseBlock;
+
+#pragma mark - 获取项目分类列表
+
+/**
+ *  获取项目分类列表
+ *  @param responseBlock 成功回调 (CommonInfo)
+ */
+-(void)findClassifyResponseBlock:(YBResponseBlock)responseBlock;
 
 #pragma mark - 获取展示图片
 
@@ -51,8 +59,6 @@
 - (void)findVideowithSortId:(NSString*)sort_id
                      newset:(NSString*)newset
               responseBlock:(YBResponseBlock)responseBlock;
-
-
 
 
 @end

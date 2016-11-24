@@ -14,7 +14,7 @@
 #import "UserInfo.h"
 #import "MirrorServerInteraction.h"
 #import "NotificationsDefine.h"
-
+#import "DoctorViewController.h"
 
 #define MAX_IMAGE_PICKER_COUNT               (15)
 
@@ -97,6 +97,13 @@
     
 
 }
+- (IBAction)selectDoctorTouch:(id)sender {
+    [self.navigationController.navigationBar setHidden:NO];
+    DoctorViewController *ctrl=[DoctorViewController viewController];
+    [self.navigationController pushViewController:ctrl animated:YES];
+
+}
+
 - (void)close
 {
     [self hideKeyboard];
