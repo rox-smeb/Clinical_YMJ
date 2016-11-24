@@ -21,7 +21,7 @@
 
 @property (strong, nonatomic) NSString* cid;                    // 国家id
 @property (strong, nonatomic) NSString* cname;                  // 国家名字
-@property (strong, nonatomic) NSArray<ProvinceInfo*>* province;                // 省名字数组
+@property (strong, nonatomic) NSMutableArray<ProvinceInfo*>* province;                // 省名字数组
 
 @end
 
