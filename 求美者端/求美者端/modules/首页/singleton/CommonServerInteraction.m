@@ -44,6 +44,19 @@ static CommonServerInteraction *SINGLETON = nil;
              params:param
       responseBlock:responseBlock];
 }
+#pragma mark - 获取项目分类列表
+-(void)findClassifyResponseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"findClassify"]
+             method:GET
+       responseType:RESPONSE_INFO_LIST
+          itemClass:[FindClassifyInfo class]
+             params:param
+      responseBlock:responseBlock];
+
+}
 
 #pragma mark - 获取展示图片
 - (void)findDisplayInfoWithType:(NSString*)type

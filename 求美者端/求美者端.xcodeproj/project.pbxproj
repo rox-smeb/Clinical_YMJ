@@ -13,6 +13,9 @@
 		183C312B1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C31291DDD9DF300C1BFA5 /* DoctorCollectionViewCell.xib */; };
 		183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C312D1DDDB11200C1BFA5 /* FindSpecialInfo.m */; };
 		186A1A041DDECD28001562CA /* ApplyConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A1A031DDECD28001562CA /* ApplyConsultationViewController.m */; };
+		18C534A01DE68E3D00A20875 /* ProvincialInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */; };
+		18C534A61DE6D8F000A20875 /* FindClassifyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */; };
+		18CE18AA1DE5BF22007A1A3C /* DoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE18A91DE5BF22007A1A3C /* DoctorViewController.m */; };
 		18E4B82E1DDB015A00F78562 /* GuaranteeOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4B82D1DDB015A00F78562 /* GuaranteeOrderViewController.m */; };
 		900B00A61D5AE837003810C5 /* TabBarCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 900B00A51D5AE837003810C5 /* TabBarCenterView.m */; };
 		900B00A91D5AE855003810C5 /* TabBarCenterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900B00A81D5AE855003810C5 /* TabBarCenterView.xib */; };
@@ -182,6 +185,12 @@
 		183C312D1DDDB11200C1BFA5 /* FindSpecialInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSpecialInfo.m; sourceTree = "<group>"; };
 		186A1A021DDECD28001562CA /* ApplyConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyConsultationViewController.h; sourceTree = "<group>"; };
 		186A1A031DDECD28001562CA /* ApplyConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyConsultationViewController.m; sourceTree = "<group>"; };
+		18C5349E1DE68E3D00A20875 /* ProvincialInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvincialInfo.h; sourceTree = "<group>"; };
+		18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvincialInfo.m; sourceTree = "<group>"; };
+		18C534A41DE6D8F000A20875 /* FindClassifyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindClassifyInfo.h; sourceTree = "<group>"; };
+		18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindClassifyInfo.m; sourceTree = "<group>"; };
+		18CE18A81DE5BF22007A1A3C /* DoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorViewController.h; sourceTree = "<group>"; };
+		18CE18A91DE5BF22007A1A3C /* DoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorViewController.m; sourceTree = "<group>"; };
 		18E4B82C1DDB015A00F78562 /* GuaranteeOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaranteeOrderViewController.h; sourceTree = "<group>"; };
 		18E4B82D1DDB015A00F78562 /* GuaranteeOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuaranteeOrderViewController.m; sourceTree = "<group>"; };
 		900B00A41D5AE837003810C5 /* TabBarCenterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarCenterView.h; sourceTree = "<group>"; };
@@ -660,6 +669,8 @@
 				905383631D65C04B007D722E /* ConsultationTableViewController.m */,
 				186A1A021DDECD28001562CA /* ApplyConsultationViewController.h */,
 				186A1A031DDECD28001562CA /* ApplyConsultationViewController.m */,
+				18CE18A81DE5BF22007A1A3C /* DoctorViewController.h */,
+				18CE18A91DE5BF22007A1A3C /* DoctorViewController.m */,
 			);
 			name = "申请会诊 | 公益会诊";
 			sourceTree = "<group>";
@@ -854,6 +865,10 @@
 				DF9520B51DD9AC87008AFF41 /* FindDisplayInfo.m */,
 				183C312C1DDDB11200C1BFA5 /* FindSpecialInfo.h */,
 				183C312D1DDDB11200C1BFA5 /* FindSpecialInfo.m */,
+				18C5349E1DE68E3D00A20875 /* ProvincialInfo.h */,
+				18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */,
+				18C534A41DE6D8F000A20875 /* FindClassifyInfo.h */,
+				18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1544,10 +1559,12 @@
 				DF96C81B1D7569F8001E5C12 /* GarageAbilityTableViewCell.m in Sources */,
 				DF1C94D61D7687B6003D5114 /* HomeTableViewHeaderView.m in Sources */,
 				DF91744E1D792E1900F32CCF /* DoctorServerInteraction.m in Sources */,
+				18C534A61DE6D8F000A20875 /* FindClassifyInfo.m in Sources */,
 				DF35FF6F1DE683BD0013E46D /* BecomeBeautifulViewController.m in Sources */,
 				905383641D65C04B007D722E /* ConsultationTableViewController.m in Sources */,
 				DF4077631DD2B5D000436FDF /* FunctionTableViewCell.m in Sources */,
 				90E76B3C1D59B816008E6C82 /* DataManager.m in Sources */,
+				18CE18AA1DE5BF22007A1A3C /* DoctorViewController.m in Sources */,
 				90E76B971D59C2F7008E6C82 /* CommonEmptyListView.m in Sources */,
 				90CDCBAE1D5D5CC300FF2B6D /* ForgetPasswordTableViewController.m in Sources */,
 				DF35FF771DE694EC0013E46D /* HospitalTableViewCell.m in Sources */,
@@ -1561,6 +1578,7 @@
 				90E76BA31D59C95A008E6C82 /* MineTableViewController.m in Sources */,
 				DF96C81F1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m in Sources */,
 				90E766B91D599207008E6C82 /* MineServerInteraction.m in Sources */,
+				18C534A01DE68E3D00A20875 /* ProvincialInfo.m in Sources */,
 				90AD75881D62A2BF00CB7661 /* DisputeResolveTableViewController.m in Sources */,
 				DFE194661D7D618C00791F8D /* VerDoctorWebViewController.m in Sources */,
 				DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */,
