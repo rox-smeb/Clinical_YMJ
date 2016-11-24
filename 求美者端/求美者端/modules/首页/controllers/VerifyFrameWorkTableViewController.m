@@ -66,9 +66,10 @@
             weakSelf.dataSource = response.i.list;
             for (NSDictionary* dict in weakSelf.dataSource)
             {
-                NSObject* info = [[CommonInfo alloc] initWithJSON:dict];
+                CommonInfo* info = [[CommonInfo alloc] initWithJSON:dict];
                 if (info != nil)
                 {
+                    NSArray *arr = info.province;
                     [list addObject:info];
                 }
             }
