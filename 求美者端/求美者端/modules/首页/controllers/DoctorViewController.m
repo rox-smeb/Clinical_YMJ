@@ -42,7 +42,7 @@
                        @{@"name" : @"好评专家", @"type"  : @(type++)},
                        @{@"name" : @"在线咨询", @"type"  : @(type++)}];
     
-    self.menu = [[DOPDropDownMenu alloc] initWithOrigin:self.menuAchorView.frame.origin andHeight:self.menuAchorView.height];
+    self.menu = [[DOPDropDownMenu alloc] initWithOrigin:self.menuAchorView.frame.origin andHeight:40];
     self.menu.dataSource = self;
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
