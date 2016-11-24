@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="HospitalTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yjws" translatesAutoresizingMaskIntoConstraints="NO" id="VwP-u6-9eZ">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="7wh-n7-z7e"/>
+                            <constraint firstAttribute="width" constant="95" id="xku-Hj-VLu"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京幸福医疗美容医院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOW-a6-hHT">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2S2-Rq-Nfg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="民营医院|北京幸福医疗美容医院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQp-Eu-OC4">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="g9K-ZK-wm1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="KOW-a6-hHT" secondAttribute="trailing" id="7TL-uc-gJe"/>
+                    <constraint firstItem="KOW-a6-hHT" firstAttribute="leading" secondItem="VwP-u6-9eZ" secondAttribute="trailing" constant="8" id="9Wf-6L-WD2"/>
+                    <constraint firstAttribute="trailing" secondItem="SQp-Eu-OC4" secondAttribute="trailing" id="NMy-PO-t5H"/>
+                    <constraint firstItem="VwP-u6-9eZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="bWX-cD-G38"/>
+                    <constraint firstItem="SQp-Eu-OC4" firstAttribute="leading" secondItem="VwP-u6-9eZ" secondAttribute="trailing" constant="8" id="gIG-Mn-Td0"/>
+                    <constraint firstItem="VwP-u6-9eZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="gme-sy-l3x"/>
+                    <constraint firstAttribute="bottom" secondItem="VwP-u6-9eZ" secondAttribute="bottom" constant="8.5" id="oKp-kO-Vo5"/>
+                    <constraint firstItem="SQp-Eu-OC4" firstAttribute="top" secondItem="KOW-a6-hHT" secondAttribute="bottom" id="tBt-xb-ma6"/>
+                    <constraint firstItem="KOW-a6-hHT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="z4M-4G-8Jz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34" y="36"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="yjws" width="336" height="201"/>
+    </resources>
+</document>

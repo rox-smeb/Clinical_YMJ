@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="fSh-jh-w5Z">
+            <objects>
+                <viewController storyboardIdentifier="BecomeBeautifulViewController" title="我要求美" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4v9-00-GcI" customClass="BecomeBeautifulViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QIC-lL-pZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="zo1-wd-ef2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="y17-0N-LQl">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Io-5M-UjO" customClass="DLCustomSlideView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4v9-00-GcI" id="h1F-57-Ach"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWf-in-5d8">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="dwW-Fl-RAO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cZ-Uu-Pw6">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="0EQ-Ju-8tY"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-o2-dus">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="DVF-d2-eUd"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zXz-o2-dus" firstAttribute="top" secondItem="QIC-lL-pZW" secondAttribute="bottom" id="0FL-5c-SNc"/>
+                            <constraint firstItem="9Io-5M-UjO" firstAttribute="top" secondItem="QIC-lL-pZW" secondAttribute="bottom" constant="46" id="4xd-q9-gqu"/>
+                            <constraint firstItem="3cZ-Uu-Pw6" firstAttribute="width" secondItem="zXz-o2-dus" secondAttribute="width" id="7Bq-nO-fJ2"/>
+                            <constraint firstAttribute="trailing" secondItem="dWf-in-5d8" secondAttribute="trailing" id="8Q3-Cj-6vE"/>
+                            <constraint firstItem="zXz-o2-dus" firstAttribute="leading" secondItem="y17-0N-LQl" secondAttribute="leading" id="BwO-8b-7s1"/>
+                            <constraint firstItem="dWf-in-5d8" firstAttribute="width" secondItem="3cZ-Uu-Pw6" secondAttribute="width" id="CBF-CP-A6N"/>
+                            <constraint firstItem="3cZ-Uu-Pw6" firstAttribute="top" secondItem="QIC-lL-pZW" secondAttribute="bottom" id="Elj-bb-7qS"/>
+                            <constraint firstItem="9Io-5M-UjO" firstAttribute="leading" secondItem="y17-0N-LQl" secondAttribute="leading" id="UFr-tz-Z06"/>
+                            <constraint firstItem="dWf-in-5d8" firstAttribute="leading" secondItem="3cZ-Uu-Pw6" secondAttribute="trailing" id="YLz-Le-dyS"/>
+                            <constraint firstItem="dWf-in-5d8" firstAttribute="top" secondItem="QIC-lL-pZW" secondAttribute="bottom" id="YTC-Wi-21b"/>
+                            <constraint firstAttribute="trailing" secondItem="9Io-5M-UjO" secondAttribute="trailing" id="cck-K5-6C6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9Io-5M-UjO" secondAttribute="bottom" id="ejF-gY-HCk"/>
+                            <constraint firstItem="3cZ-Uu-Pw6" firstAttribute="leading" secondItem="zXz-o2-dus" secondAttribute="trailing" id="y0c-xU-fSm"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="customSlideView" destination="9Io-5M-UjO" id="Bxm-jc-kNT"/>
+                        <outlet property="menuAchorView" destination="dWf-in-5d8" id="fjJ-Ju-JOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zcA-wK-XbU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14.5" y="196.5"/>
+        </scene>
+        <!--Become Beautiful Sub View Controller-->
+        <scene sceneID="cXi-lf-rZS">
+            <objects>
+                <viewController storyboardIdentifier="BecomeBeautifulSubViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lTv-hi-NED" customClass="BecomeBeautifulSubViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZZI-gq-i99"/>
+                        <viewControllerLayoutGuide type="bottom" id="gOY-yF-u98"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yig-tH-g8h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-o2-tHq">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="lTv-hi-NED" id="2Fn-1l-Ul2"/>
+                                    <outlet property="delegate" destination="lTv-hi-NED" id="ZtU-fl-BwZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XzR-o2-tHq" firstAttribute="leading" secondItem="yig-tH-g8h" secondAttribute="leading" id="P4K-Aq-HHf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="XzR-o2-tHq" secondAttribute="bottom" id="ghR-6g-SG0"/>
+                            <constraint firstAttribute="trailing" secondItem="XzR-o2-tHq" secondAttribute="trailing" id="nlz-Qb-YUi"/>
+                            <constraint firstAttribute="topMargin" secondItem="XzR-o2-tHq" secondAttribute="top" id="y2G-O6-CML"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="beautifulTableView" destination="XzR-o2-tHq" id="lES-bd-RAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIy-45-dQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418.5" y="196.5"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
