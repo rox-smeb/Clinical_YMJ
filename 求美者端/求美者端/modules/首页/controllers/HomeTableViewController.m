@@ -22,6 +22,9 @@
 #import "VerifyFrameWorkTableViewController.h"
 #import "DisputeResolveViewController.h"
 #import "ConsultationCollectionViewController.h"
+#import "BecomeBeautifulViewController.h"
+
+
 @interface HomeTableViewController ()<UITableViewDelegate,
                                       UITableViewDataSource,
                                       UINavigationControllerDelegate,
@@ -263,19 +266,21 @@
 // 我要求美
 - (void)didSelectWantPretty
 {
-    
+    [self.navigationController.navigationBar setHidden:NO];
+    BecomeBeautifulViewController *becomeVC = [BecomeBeautifulViewController viewController];
+    [self.navigationController pushViewController:becomeVC animated:YES];
 }
 
 // 失败手术修复
 - (void)didSelectSurgeryRepair
 {
-    
+
 }
 
 // 直通韩国
 - (void)didSelectGoToKorea
 {
-    
+
 }
 
 // 专家咨询
