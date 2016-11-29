@@ -54,9 +54,9 @@ do                                                   \
 
 #define DEFAULT_IMAGE_HEIGHT_2_WIDTH_RATIO          (3.0f / 4.0f)                           // 图片宽高比例
 #define DEFAULT_IMAGE_HEIGHT_2_WIDTH_RATIO1         (3.0f / 5.0f)                           // 图片宽高比例1
-#define DEFAULT_IMAGE_NAME                          (@"默认图片")
+#define DEFAULT_IMAGE_NAME                          (@"yjws")
 #define DEFAULT_IMAGE                               ([UIImage imageNamed:DEFAULT_IMAGE_NAME])
-#define DEFAULT_HEAD_IMAGE_NAME                     (@"默认头像")
+#define DEFAULT_HEAD_IMAGE_NAME                     (@"head")
 #define DEFAULT_HEAD_IMAGE                          ([UIImage imageNamed:DEFAULT_HEAD_IMAGE_NAME])
 #define DEFAULT_HEAD_IMAGE_NAME1                    (@"默认头像1")
 #define DEFAULT_HEAD_IMAGE1                         ([UIImage imageNamed:DEFAULT_HEAD_IMAGE_NAME1])

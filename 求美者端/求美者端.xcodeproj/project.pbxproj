@@ -161,6 +161,12 @@
 		DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0682F1DE562C000E1C244 /* BelieveTableViewController.m */; };
 		DFF068341DE563F800E1C244 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF068321DE563F800E1C244 /* VideoTableViewCell.m */; };
 		DFF068351DE563F800E1C244 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */; };
+		DFFAC6B21DE7D9DF00A0F4A3 /* BeautyServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B11DE7D9DF00A0F4A3 /* BeautyServerInteraction.m */; };
+		DFFAC6B61DE7DD0600A0F4A3 /* AuctionProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B51DE7DD0600A0F4A3 /* AuctionProjectInfo.m */; };
+		DFFAC6B91DE7EEE000A0F4A3 /* ExpertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B81DE7EEE000A0F4A3 /* ExpertInfo.m */; };
+		DFFAC6BC1DE7F88B00A0F4A3 /* AgencyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6BB1DE7F88B00A0F4A3 /* AgencyInfo.m */; };
+		DFFAC6CA1DE8366500A0F4A3 /* ExpertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6C81DE8366500A0F4A3 /* ExpertTableViewCell.m */; };
+		DFFAC6CB1DE8366500A0F4A3 /* ExpertTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFFAC6C91DE8366500A0F4A3 /* ExpertTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -406,6 +412,17 @@
 		DFF068311DE563F800E1C244 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
 		DFF068321DE563F800E1C244 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
 		DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		DFFAC6B01DE7D9DF00A0F4A3 /* BeautyServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeautyServerInteraction.h; sourceTree = "<group>"; };
+		DFFAC6B11DE7D9DF00A0F4A3 /* BeautyServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautyServerInteraction.m; sourceTree = "<group>"; };
+		DFFAC6B41DE7DD0600A0F4A3 /* AuctionProjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuctionProjectInfo.h; sourceTree = "<group>"; };
+		DFFAC6B51DE7DD0600A0F4A3 /* AuctionProjectInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuctionProjectInfo.m; sourceTree = "<group>"; };
+		DFFAC6B71DE7EEE000A0F4A3 /* ExpertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertInfo.h; sourceTree = "<group>"; };
+		DFFAC6B81DE7EEE000A0F4A3 /* ExpertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertInfo.m; sourceTree = "<group>"; };
+		DFFAC6BA1DE7F88B00A0F4A3 /* AgencyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgencyInfo.h; sourceTree = "<group>"; };
+		DFFAC6BB1DE7F88B00A0F4A3 /* AgencyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgencyInfo.m; sourceTree = "<group>"; };
+		DFFAC6C71DE8366500A0F4A3 /* ExpertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpertTableViewCell.h; sourceTree = "<group>"; };
+		DFFAC6C81DE8366500A0F4A3 /* ExpertTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpertTableViewCell.m; sourceTree = "<group>"; };
+		DFFAC6C91DE8366500A0F4A3 /* ExpertTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpertTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -593,6 +610,12 @@
 				DF8F84F21D79527B006D7EB5 /* CommonInfo.h */,
 				DF8F84F31D79527B006D7EB5 /* CommonInfo.m */,
 				DF8F84FD1D7963B6006D7EB5 /* SelectModelProtocol.h */,
+				DFFAC6B41DE7DD0600A0F4A3 /* AuctionProjectInfo.h */,
+				DFFAC6B51DE7DD0600A0F4A3 /* AuctionProjectInfo.m */,
+				DFFAC6B71DE7EEE000A0F4A3 /* ExpertInfo.h */,
+				DFFAC6B81DE7EEE000A0F4A3 /* ExpertInfo.m */,
+				DFFAC6BA1DE7F88B00A0F4A3 /* AgencyInfo.h */,
+				DFFAC6BB1DE7F88B00A0F4A3 /* AgencyInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -602,6 +625,8 @@
 			children = (
 				90AD75681D615C3C00CB7661 /* YMJCommonServerInteraction.h */,
 				90AD75691D615C3C00CB7661 /* YMJCommonServerInteraction.m */,
+				DFFAC6B01DE7D9DF00A0F4A3 /* BeautyServerInteraction.h */,
+				DFFAC6B11DE7D9DF00A0F4A3 /* BeautyServerInteraction.m */,
 			);
 			path = singleton;
 			sourceTree = "<group>";
@@ -609,6 +634,7 @@
 		90AD75671D615BC900CB7661 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DFFAC6C11DE835E700A0F4A3 /* 医生cell */,
 				DF35FF731DE694760013E46D /* 机构cell */,
 				DF8F84FE1D7963E3006D7EB5 /* CommonSelectTableSectionHeader.h */,
 				DF8F84FF1D7963E3006D7EB5 /* CommonSelectTableSectionHeader.m */,
@@ -1374,6 +1400,16 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		DFFAC6C11DE835E700A0F4A3 /* 医生cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFFAC6C71DE8366500A0F4A3 /* ExpertTableViewCell.h */,
+				DFFAC6C81DE8366500A0F4A3 /* ExpertTableViewCell.m */,
+				DFFAC6C91DE8366500A0F4A3 /* ExpertTableViewCell.xib */,
+			);
+			name = "医生cell";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1488,6 +1524,7 @@
 				90E769F21D59B816008E6C82 /* Assets.xcassets in Resources */,
 				DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */,
 				90E76B2C1D59B816008E6C82 /* fontawesome-webfont.ttf in Resources */,
+				DFFAC6CB1DE8366500A0F4A3 /* ExpertTableViewCell.xib in Resources */,
 				90E76B2A1D59B816008E6C82 /* fontawesome-webfont.eot in Resources */,
 				90E76B391D59B816008E6C82 /* respond.min.js in Resources */,
 				90E76B981D59C2F7008E6C82 /* CommonEmptyListView.xib in Resources */,
@@ -1531,9 +1568,12 @@
 				90E76B3A1D59B816008E6C82 /* AppURL.m in Sources */,
 				DF9520B61DD9AC87008AFF41 /* FindDisplayInfo.m in Sources */,
 				18E4B82E1DDB015A00F78562 /* GuaranteeOrderViewController.m in Sources */,
+				DFFAC6CA1DE8366500A0F4A3 /* ExpertTableViewCell.m in Sources */,
 				DFE1EE4B1DD3030300227EB8 /* FaceLiftingTableViewCell.m in Sources */,
 				9022EC871D5C781400C826B5 /* RegisterViewController.m in Sources */,
+				DFFAC6B21DE7D9DF00A0F4A3 /* BeautyServerInteraction.m in Sources */,
 				90CDCBA51D5D59E700FF2B6D /* InputAccessoryView.m in Sources */,
+				DFFAC6B91DE7EEE000A0F4A3 /* ExpertInfo.m in Sources */,
 				90AD756A1D615C3C00CB7661 /* YMJCommonServerInteraction.m in Sources */,
 				90B56EC31D62D6E300E4232B /* ImageAddCollectionViewCell.m in Sources */,
 				90AD75831D61C0C500CB7661 /* SegmentedControlConfiger.m in Sources */,
@@ -1564,6 +1604,7 @@
 				905383641D65C04B007D722E /* ConsultationTableViewController.m in Sources */,
 				DF4077631DD2B5D000436FDF /* FunctionTableViewCell.m in Sources */,
 				90E76B3C1D59B816008E6C82 /* DataManager.m in Sources */,
+				DFFAC6B61DE7DD0600A0F4A3 /* AuctionProjectInfo.m in Sources */,
 				18CE18AA1DE5BF22007A1A3C /* DoctorViewController.m in Sources */,
 				90E76B971D59C2F7008E6C82 /* CommonEmptyListView.m in Sources */,
 				90CDCBAE1D5D5CC300FF2B6D /* ForgetPasswordTableViewController.m in Sources */,
@@ -1587,6 +1628,7 @@
 				183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */,
 				DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */,
 				90E766B61D599207008E6C82 /* MainTabBarController.m in Sources */,
+				DFFAC6BC1DE7F88B00A0F4A3 /* AgencyInfo.m in Sources */,
 				90AD75741D61701200CB7661 /* HomePormptInfo.m in Sources */,
 				182EFEFD1DDC2F730061A47E /* DisputeResolveViewController.m in Sources */,
 				9022EC731D5C511B00C826B5 /* ConsultationViewController.m in Sources */,

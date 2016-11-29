@@ -85,8 +85,8 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XzR-o2-tHq">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="lTv-hi-NED" id="2Fn-1l-Ul2"/>
-                                    <outlet property="delegate" destination="lTv-hi-NED" id="ZtU-fl-BwZ"/>
+                                    <outlet property="dataSource" destination="lTv-hi-NED" id="xvE-UG-3Q5"/>
+                                    <outlet property="delegate" destination="lTv-hi-NED" id="6yn-TD-CxR"/>
                                 </connections>
                             </tableView>
                         </subviews>

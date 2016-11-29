@@ -9,6 +9,7 @@
 #import "BecomeBeautifulViewController.h"
 #import "BecomeBeautifulSubViewController.h"
 #import "YBCommonKit/DOPDropDownMenu.h"
+#import "CommonServerInteraction.h"
 
 #define ITEM_HEIGHT                 (40.0f)
 #define ITEM_FONT_SIZE              (15.0f)
@@ -22,8 +23,9 @@
 @property (strong, nonatomic) DOPDropDownMenu* menu;
 
 @property (strong, nonatomic) NSArray* sortTypes_1;
-@property (strong, nonatomic) NSArray* sortTypes_2;
-@property (strong, nonatomic) NSArray* sortTypes_3;
+
+@property (strong, nonatomic) NSArray* provincialInfoArray;                 // 省市
+@property (strong, nonatomic) NSArray* classifyInfoArray;                   // 项目分类
 
 @end
 
@@ -40,6 +42,9 @@
     
     [self setupMenuAchorView];
     [self setupCustomSlideView];
+    [self loadProvincialInfo];
+    [self loadFindClassifyInfo];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,21 +62,9 @@
 - (void)setupMenuAchorView
 {
     NSInteger type = 1;
-    self.sortTypes_1 = @[@{@"name" : @"项目名称",   @"type" : @(type++)},
-                         @{@"name" : @"全部",      @"type" : @(type++)},
-                         @{@"name" : @"新海航大厦", @"type" : @(type++)},
-                         @{@"name" : @"海南大厦",   @"type" : @(type++)}];
-    
-    self.sortTypes_2 = @[@{@"name" : @"故障系统",   @"type" : @(type++)},
-                         @{@"name" : @"全部",      @"type" : @(type++)},
-                         @{@"name" : @"消防系统",   @"type" : @(type++)},
-                         @{@"name" : @"周界系统",   @"type" : @(type++)}];
-    
-    self.sortTypes_3 = @[@{@"name" : @"优先级",     @"type" : @(type++)},
-                         @{@"name" : @"全部",      @"type" : @(type++)},
-                         @{@"name" : @"高",        @"type" : @(type++)},
-                         @{@"name" : @"中",        @"type" : @(type++)},
-                         @{@"name" : @"低",        @"type" : @(type++)}];
+    self.sortTypes_1 = @[@{@"name" : @"智能推荐", @"type"  : @(type++)},
+                         @{@"name" : @"好评专家", @"type"  : @(type++)},
+                         @{@"name" : @"在线咨询", @"type"  : @(type++)}];
     
     self.menu = [[DOPDropDownMenu alloc] initWithOrigin:self.menuAchorView.frame.origin andHeight:46];
     self.menu.dataSource = self;
@@ -138,6 +131,61 @@
 //    }
 }
 
+#pragma mark - 获取省市区信息
+- (void)loadProvincialInfo
+{
+    @weakify_self;
+    YB_RESPONSE_BLOCK_EX(block, NSArray<CommonInfo*>*)
+    {
+        if (weakSelf.provincialInfoArray != nil)
+        {
+            return ;
+        }
+        
+        if ([response success])
+        {
+            NSMutableArray* array = [NSMutableArray array];
+            [array backInsertArray:dataOrList];
+            for(int i=0;i<array.count;i++)
+            {
+                CommonInfo* child=[array objectAtIndex:i];
+                ProvinceInfo* addChildObject=[[ProvinceInfo alloc]init];
+                addChildObject.pid=@"";
+                addChildObject.pName = [NSString stringWithFormat:@"%@全部地区",child.cname];
+                [child.province insertObject:addChildObject atIndex:0];
+            }
+            weakSelf.provincialInfoArray = array;
+            [weakSelf.menu reloadData];
+        }
+    };
+    [[CommonServerInteraction sharedInstance] findProvinceResponseBlock:block];
+    
+}
+
+#pragma mark - 获取项目分类列表
+- (void)loadFindClassifyInfo
+{
+    @weakify_self;
+    YB_RESPONSE_BLOCK_EX(block, NSArray<FindClassifyInfo*>*)
+    {
+        if (weakSelf.classifyInfoArray != nil)
+        {
+            return ;
+        }
+        
+        if ([response success])
+        {
+            NSMutableArray* array = [NSMutableArray array];
+                        
+            [array backInsertArray:dataOrList];
+            weakSelf.classifyInfoArray = array;
+            [weakSelf.menu reloadData];
+        }
+    };
+    [[CommonServerInteraction sharedInstance] findClassifyResponseBlock:block];
+    
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -168,17 +216,17 @@
 // 一级列表返回多少行
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column
 {
-    if(column == 0)
+    if(column == 0 && self.provincialInfoArray != nil)
+    {
+        return [self.provincialInfoArray count];
+    }
+    if(column == 1 && self.classifyInfoArray != nil)
+    {
+        return [self.classifyInfoArray count];
+    }
+    if(column == 2 )
     {
         return [self.sortTypes_1 count];
-    }
-    if(column == 1)
-    {
-        return [self.sortTypes_2 count];
-    }
-    if(column == 2)
-    {
-        return [self.sortTypes_3 count];
     }
     return 0;
 }
@@ -187,29 +235,29 @@
 - (NSString*)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath
 {
     if (indexPath.column == 0) {
-        if (indexPath.row < [self.sortTypes_1 count])
+        if (indexPath.row < [self.provincialInfoArray count])
         {
-            NSDictionary* dict = [self.sortTypes_1 objectAtIndex:indexPath.row];
-            if ([dict isKindOfClass:[NSDictionary class]])
+            CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[CommonInfo class]])
             {
-                return dict[@"name"];
+                return info.cname;
             }
         }
     }
     if (indexPath.column == 1) {
-        if (indexPath.row < [self.sortTypes_2 count])
+        if (indexPath.row < [self.classifyInfoArray count])
         {
-            NSDictionary* dict = [self.sortTypes_2 objectAtIndex:indexPath.row];
-            if ([dict isKindOfClass:[NSDictionary class]])
+            FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[FindClassifyInfo class]])
             {
-                return dict[@"name"];
+                return info.pName;
             }
         }
     }
     if (indexPath.column == 2) {
-        if (indexPath.row < [self.sortTypes_3 count])
+        if (indexPath.row < [self.sortTypes_1 count])
         {
-            NSDictionary* dict = [self.sortTypes_3 objectAtIndex:indexPath.row];
+            NSDictionary* dict = [self.sortTypes_1 objectAtIndex:indexPath.row];
             if ([dict isKindOfClass:[NSDictionary class]])
             {
                 return dict[@"name"];
@@ -222,17 +270,21 @@
 // 二级列表返回多少行
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfItemsInRow:(NSInteger)row column:(NSInteger)column
 {
-    if(column == 0)
+    if(column == 0 && self.provincialInfoArray != nil)
     {
-        return [self.sortTypes_1 count];
+        CommonInfo* info = [self.provincialInfoArray objectAtIndex:row];
+        if ([info isKindOfClass:[CommonInfo class]] && [info.province isKindOfClass:[NSArray class]])
+        {
+            return [info.province count];
+        }
     }
-    if(column == 1)
+    if(column == 1 && self.classifyInfoArray != nil)
     {
-        return [self.sortTypes_2 count];
-    }
-    if(column == 2)
-    {
-        return [self.sortTypes_3 count];
+        FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:row];
+        if ([info isKindOfClass:[FindClassifyInfo class]] && [info.cList isKindOfClass:[NSArray class]])
+        {
+            return [info.cList count];
+        }
     }
     return 0;
 }
@@ -240,36 +292,41 @@
 // 二级列表title
 - (NSString *)menu:(DOPDropDownMenu *)menu titleForItemsInRowAtIndexPath:(DOPIndexPath *)indexPath
 {
-    if (indexPath.column == 0) {
-        if (indexPath.row < [self.sortTypes_1 count])
+    if (indexPath.column == 0 && self.provincialInfoArray != nil)
+    {
+        if (indexPath.row < [self.provincialInfoArray count])
         {
-            NSDictionary* dict = [self.sortTypes_1 objectAtIndex:indexPath.row];
-            if ([dict isKindOfClass:[NSDictionary class]])
+            CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[CommonInfo class]]   &&
+                [info.province isKindOfClass:[NSArray class]] &&
+                indexPath.item < [info.province count])
             {
-                return dict[@"name"];
+                ProvinceInfo* cityInfo = [info.province objectAtIndex:indexPath.item];
+                if ([cityInfo isKindOfClass:[ProvinceInfo class]])
+                {
+                    return cityInfo.pName;
+                }
             }
         }
     }
-    if (indexPath.column == 1) {
-        if (indexPath.row < [self.sortTypes_2 count])
+    if (indexPath.column == 1 && self.classifyInfoArray != nil)
+    {
+        if (indexPath.row < [self.classifyInfoArray count])
         {
-            NSDictionary* dict = [self.sortTypes_2 objectAtIndex:indexPath.row];
-            if ([dict isKindOfClass:[NSDictionary class]])
+            FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[FindClassifyInfo class]]   &&
+                [info.cList isKindOfClass:[NSArray class]] &&
+                indexPath.item < [info.cList count])
             {
-                return dict[@"name"];
+                ClassifyChildInfo* cityInfo = [info.cList objectAtIndex:indexPath.item];
+                if ([cityInfo isKindOfClass:[ClassifyChildInfo class]])
+                {
+                    return cityInfo.cName;
+                }
             }
         }
     }
-    if (indexPath.column == 2) {
-        if (indexPath.row < [self.sortTypes_3 count])
-        {
-            NSDictionary* dict = [self.sortTypes_3 objectAtIndex:indexPath.row];
-            if ([dict isKindOfClass:[NSDictionary class]])
-            {
-                return dict[@"name"];
-            }
-        }
-    }
+    
     return @"";
 }
 

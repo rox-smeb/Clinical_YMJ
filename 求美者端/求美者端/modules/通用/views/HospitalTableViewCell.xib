@@ -51,6 +51,11 @@
                     <constraint firstItem="KOW-a6-hHT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="z4M-4G-8Jz"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="name" destination="KOW-a6-hHT" id="6rb-bZ-uia"/>
+                <outlet property="type" destination="SQp-Eu-OC4" id="u3S-xW-umU"/>
+                <outlet property="url" destination="VwP-u6-9eZ" id="yVv-EY-eoy"/>
+            </connections>
             <point key="canvasLocation" x="34" y="36"/>
         </tableViewCell>
     </objects>

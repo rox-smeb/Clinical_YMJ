@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AgencyInfo.h"
 
 @interface HospitalTableViewCell : UITableViewCell
 
 + (CGFloat)height;
+
+- (void)setUpWithAgencyInfo:(AgencyInfo*)agencyInfo;
+- (void)setupWithInfo:(AgencyInfo*)agencyInfo orderInfo:(AgencyRecomendInfo*)agencyRecomendInfo;
 
 @end
