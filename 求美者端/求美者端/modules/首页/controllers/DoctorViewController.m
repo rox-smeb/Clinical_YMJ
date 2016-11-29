@@ -120,131 +120,89 @@
 }
 
 #pragma mark - DOPDropDownMenuDataSource
-
+// 返回几个列表
 - (NSInteger)numberOfColumnsInMenu:(DOPDropDownMenu *)menu
 {
-//    if (self.provincialInfoArray == nil && self.classifyInfoArray==nil)
-//    {
-//        return 1;
-//    }
     return 3;
 }
 
+// 一级列表返回多少行
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfRowsInColumn:(NSInteger)column
 {
-    if(column==0)
+    if(column == 0 && self.provincialInfoArray != nil)
     {
         return [self.provincialInfoArray count];
     }
-    else if(column==1)
+    if(column == 1 && self.classifyInfoArray != nil)
     {
         return [self.classifyInfoArray count];
     }
-    else if(column==2){
+    if(column == 2 )
+    {
         return [self.sortTypes count];
     }
     return 0;
-//    if(column == 1 || self.provincialInfoArray == nil)
-//    {
-//        return [self.sortTypes count];
-//    }
-//    return [self.provincialInfoArray count];
 }
 
+// 一级列表title
 - (NSString*)menu:(DOPDropDownMenu *)menu titleForRowAtIndexPath:(DOPIndexPath *)indexPath
 {
-    if(indexPath.column==0)
-    {
-        CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
-                if ([info isKindOfClass:[CommonInfo class]])
-                {
-                    return info.cname;
-                }
-
-    }
-    if(indexPath.column==1)
-    {
-        FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:indexPath.row];
-        if ([info isKindOfClass:[FindClassifyInfo class]])
+    if (indexPath.column == 0) {
+        if (indexPath.row < [self.provincialInfoArray count])
         {
-            return info.pName;
+            CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[CommonInfo class]])
+            {
+                return info.cname;
+            }
         }
     }
-    if(indexPath.column==2)
-    {
-        if (indexPath.row < [self.sortTypes count])
-                    {
-                        NSDictionary* dict = [self.sortTypes objectAtIndex:indexPath.row];
-                        if ([dict isKindOfClass:[NSDictionary class]])
-                        {
-                            return dict[@"name"];
-                        }
-                    }
-
+    if (indexPath.column == 1) {
+        if (indexPath.row < [self.classifyInfoArray count])
+        {
+            FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:indexPath.row];
+            if ([info isKindOfClass:[FindClassifyInfo class]])
+            {
+                return info.pName;
+            }
+        }
     }
-//    if (indexPath.column == 1 || self.provincialInfoArray == nil)
-//    {
-//        if (indexPath.row < [self.sortTypes count])
-//        {
-//            NSDictionary* dict = [self.sortTypes objectAtIndex:indexPath.row];
-//            if ([dict isKindOfClass:[NSDictionary class]])
-//            {
-//                return dict[@"name"];
-//            }
-//        }
-//    }
-//    
-//    if (indexPath.row < [self.provincialInfoArray count])
-//    {
-//        
-//        CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
-//        if ([info isKindOfClass:[CommonInfo class]])
-//        {
-//            return info.cname;
-//        }
-//    }
+    if (indexPath.column == 2) {
+        if (indexPath.row < [self.sortTypes count])
+        {
+            NSDictionary* dict = [self.sortTypes objectAtIndex:indexPath.row];
+            if ([dict isKindOfClass:[NSDictionary class]])
+            {
+                return dict[@"name"];
+            }
+        }
+    }
     return @"";
 }
 
+// 二级列表返回多少行
 - (NSInteger)menu:(DOPDropDownMenu *)menu numberOfItemsInRow:(NSInteger)row column:(NSInteger)column
 {
-    if(column==0)
+    if(column == 0 && self.provincialInfoArray != nil)
     {
         CommonInfo* info = [self.provincialInfoArray objectAtIndex:row];
         if ([info isKindOfClass:[CommonInfo class]] && [info.province isKindOfClass:[NSArray class]])
         {
             return [info.province count];
         }
-
     }
-    if(column==1)
+    if(column == 1 && self.classifyInfoArray != nil)
     {
         FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:row];
         if ([info isKindOfClass:[FindClassifyInfo class]] && [info.cList isKindOfClass:[NSArray class]])
         {
             return [info.cList count];
         }
-
     }
-    if(column==2)
-    {
-        return 0;
-    }
-//    if (column == 2 || self.provincialInfoArray == nil)
-//    {
-//        return 0;
-//    }
-//    if (row < [self.provincialInfoArray count])
-//    {
-//        CommonInfo* info = [self.provincialInfoArray objectAtIndex:row];
-//        if ([info isKindOfClass:[CommonInfo class]] && [info.province isKindOfClass:[NSArray class]])
-//        {
-//            return [info.province count];
-//        }
-//    }
     return 0;
 }
 
+// 二级列表title
 - (NSString *)menu:(DOPDropDownMenu *)menu titleForItemsInRowAtIndexPath:(DOPIndexPath *)indexPath
 {
     if (indexPath.column == 0 && self.provincialInfoArray != nil)
@@ -281,10 +239,16 @@
             }
         }
     }
-
+    
     return @"";
 }
 
+#pragma mark - DOPDropDownMenuDelegate
+
+- (void)menu:(DOPDropDownMenu *)menu didSelectRowAtIndexPath:(DOPIndexPath *)indexPath
+{
+    
+}
 
 
 @end

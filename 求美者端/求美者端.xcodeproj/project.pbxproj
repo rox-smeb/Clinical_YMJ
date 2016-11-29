@@ -12,9 +12,22 @@
 		183C312A1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C31281DDD9DF300C1BFA5 /* DoctorCollectionViewCell.m */; };
 		183C312B1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C31291DDD9DF300C1BFA5 /* DoctorCollectionViewCell.xib */; };
 		183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C312D1DDDB11200C1BFA5 /* FindSpecialInfo.m */; };
+		185AF39C1DE92BEA00CB193E /* CaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF39A1DE92BEA00CB193E /* CaseTableViewCell.m */; };
+		185AF39D1DE92BEA00CB193E /* CaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AF39B1DE92BEA00CB193E /* CaseTableViewCell.xib */; };
+		185AF3A01DE93A7100CB193E /* GetCaseListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF39F1DE93A7100CB193E /* GetCaseListInfo.m */; };
+		185AF3A31DE986B000CB193E /* ApplyFailRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF3A21DE986B000CB193E /* ApplyFailRepairViewController.m */; };
+		185AF3A81DEC170C00CB193E /* MyCaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF3A61DEC170C00CB193E /* MyCaseTableViewCell.m */; };
+		185AF3A91DEC170C00CB193E /* MyCaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185AF3A71DEC170C00CB193E /* MyCaseTableViewCell.xib */; };
+		185AF3AC1DEC1C9300CB193E /* MyMedicalRecordListInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF3AB1DEC1C9300CB193E /* MyMedicalRecordListInfo.m */; };
+		185AF3AF1DEC1EAF00CB193E /* MyServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF3AE1DEC1EAF00CB193E /* MyServerInteraction.m */; };
+		185AF3B21DEC22E800CB193E /* MyMedicalRecordListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185AF3B11DEC22E800CB193E /* MyMedicalRecordListTableViewController.m */; };
 		186A1A041DDECD28001562CA /* ApplyConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186A1A031DDECD28001562CA /* ApplyConsultationViewController.m */; };
 		18C534A01DE68E3D00A20875 /* ProvincialInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */; };
 		18C534A61DE6D8F000A20875 /* FindClassifyInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */; };
+		18C534AD1DE703B600A20875 /* ToKoreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C534AC1DE703B600A20875 /* ToKoreaViewController.m */; };
+		18C534B21DE7C53500A20875 /* KoreaDoctorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C534B01DE7C53500A20875 /* KoreaDoctorTableViewCell.m */; };
+		18C534B31DE7C53500A20875 /* KoreaDoctorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C534B11DE7C53500A20875 /* KoreaDoctorTableViewCell.xib */; };
+		18C534B91DE85CFC00A20875 /* FailRepairViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C534B81DE85CFC00A20875 /* FailRepairViewController.m */; };
 		18CE18AA1DE5BF22007A1A3C /* DoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE18A91DE5BF22007A1A3C /* DoctorViewController.m */; };
 		18E4B82E1DDB015A00F78562 /* GuaranteeOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4B82D1DDB015A00F78562 /* GuaranteeOrderViewController.m */; };
 		900B00A61D5AE837003810C5 /* TabBarCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 900B00A51D5AE837003810C5 /* TabBarCenterView.m */; };
@@ -189,12 +202,35 @@
 		183C31291DDD9DF300C1BFA5 /* DoctorCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorCollectionViewCell.xib; sourceTree = "<group>"; };
 		183C312C1DDDB11200C1BFA5 /* FindSpecialInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSpecialInfo.h; sourceTree = "<group>"; };
 		183C312D1DDDB11200C1BFA5 /* FindSpecialInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSpecialInfo.m; sourceTree = "<group>"; };
+		185AF3991DE92BEA00CB193E /* CaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseTableViewCell.h; sourceTree = "<group>"; };
+		185AF39A1DE92BEA00CB193E /* CaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseTableViewCell.m; sourceTree = "<group>"; };
+		185AF39B1DE92BEA00CB193E /* CaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaseTableViewCell.xib; sourceTree = "<group>"; };
+		185AF39E1DE93A7100CB193E /* GetCaseListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetCaseListInfo.h; sourceTree = "<group>"; };
+		185AF39F1DE93A7100CB193E /* GetCaseListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetCaseListInfo.m; sourceTree = "<group>"; };
+		185AF3A11DE986B000CB193E /* ApplyFailRepairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyFailRepairViewController.h; sourceTree = "<group>"; };
+		185AF3A21DE986B000CB193E /* ApplyFailRepairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyFailRepairViewController.m; sourceTree = "<group>"; };
+		185AF3A51DEC170C00CB193E /* MyCaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCaseTableViewCell.h; sourceTree = "<group>"; };
+		185AF3A61DEC170C00CB193E /* MyCaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCaseTableViewCell.m; sourceTree = "<group>"; };
+		185AF3A71DEC170C00CB193E /* MyCaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCaseTableViewCell.xib; sourceTree = "<group>"; };
+		185AF3AA1DEC1C9300CB193E /* MyMedicalRecordListInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMedicalRecordListInfo.h; sourceTree = "<group>"; };
+		185AF3AB1DEC1C9300CB193E /* MyMedicalRecordListInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMedicalRecordListInfo.m; sourceTree = "<group>"; };
+		185AF3AD1DEC1EAF00CB193E /* MyServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyServerInteraction.h; sourceTree = "<group>"; };
+		185AF3AE1DEC1EAF00CB193E /* MyServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyServerInteraction.m; sourceTree = "<group>"; };
+		185AF3B01DEC22E800CB193E /* MyMedicalRecordListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMedicalRecordListTableViewController.h; sourceTree = "<group>"; };
+		185AF3B11DEC22E800CB193E /* MyMedicalRecordListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMedicalRecordListTableViewController.m; sourceTree = "<group>"; };
 		186A1A021DDECD28001562CA /* ApplyConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplyConsultationViewController.h; sourceTree = "<group>"; };
 		186A1A031DDECD28001562CA /* ApplyConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplyConsultationViewController.m; sourceTree = "<group>"; };
 		18C5349E1DE68E3D00A20875 /* ProvincialInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvincialInfo.h; sourceTree = "<group>"; };
 		18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvincialInfo.m; sourceTree = "<group>"; };
 		18C534A41DE6D8F000A20875 /* FindClassifyInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindClassifyInfo.h; sourceTree = "<group>"; };
 		18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindClassifyInfo.m; sourceTree = "<group>"; };
+		18C534AB1DE703B600A20875 /* ToKoreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToKoreaViewController.h; sourceTree = "<group>"; };
+		18C534AC1DE703B600A20875 /* ToKoreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToKoreaViewController.m; sourceTree = "<group>"; };
+		18C534AF1DE7C53500A20875 /* KoreaDoctorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KoreaDoctorTableViewCell.h; sourceTree = "<group>"; };
+		18C534B01DE7C53500A20875 /* KoreaDoctorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KoreaDoctorTableViewCell.m; sourceTree = "<group>"; };
+		18C534B11DE7C53500A20875 /* KoreaDoctorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KoreaDoctorTableViewCell.xib; sourceTree = "<group>"; };
+		18C534B71DE85CFC00A20875 /* FailRepairViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailRepairViewController.h; sourceTree = "<group>"; };
+		18C534B81DE85CFC00A20875 /* FailRepairViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailRepairViewController.m; sourceTree = "<group>"; };
 		18CE18A81DE5BF22007A1A3C /* DoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorViewController.h; sourceTree = "<group>"; };
 		18CE18A91DE5BF22007A1A3C /* DoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorViewController.m; sourceTree = "<group>"; };
 		18E4B82C1DDB015A00F78562 /* GuaranteeOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaranteeOrderViewController.h; sourceTree = "<group>"; };
@@ -473,6 +509,45 @@
 			name = "专家会诊cell";
 			sourceTree = "<group>";
 		};
+		185AF3971DE92B8600CB193E /* 案例展示 */ = {
+			isa = PBXGroup;
+			children = (
+				185AF3991DE92BEA00CB193E /* CaseTableViewCell.h */,
+				185AF39A1DE92BEA00CB193E /* CaseTableViewCell.m */,
+				185AF39B1DE92BEA00CB193E /* CaseTableViewCell.xib */,
+			);
+			name = "案例展示";
+			sourceTree = "<group>";
+		};
+		185AF3A41DEC16E500CB193E /* 我的病历 */ = {
+			isa = PBXGroup;
+			children = (
+				185AF3A51DEC170C00CB193E /* MyCaseTableViewCell.h */,
+				185AF3A61DEC170C00CB193E /* MyCaseTableViewCell.m */,
+				185AF3A71DEC170C00CB193E /* MyCaseTableViewCell.xib */,
+			);
+			name = "我的病历";
+			sourceTree = "<group>";
+		};
+		18C534A91DE7036100A20875 /* 直通韩国 */ = {
+			isa = PBXGroup;
+			children = (
+				18C534AB1DE703B600A20875 /* ToKoreaViewController.h */,
+				18C534AC1DE703B600A20875 /* ToKoreaViewController.m */,
+			);
+			name = "直通韩国";
+			sourceTree = "<group>";
+		};
+		18C534AE1DE7C43200A20875 /* 直通韩国 */ = {
+			isa = PBXGroup;
+			children = (
+				18C534AF1DE7C53500A20875 /* KoreaDoctorTableViewCell.h */,
+				18C534B01DE7C53500A20875 /* KoreaDoctorTableViewCell.m */,
+				18C534B11DE7C53500A20875 /* KoreaDoctorTableViewCell.xib */,
+			);
+			name = "直通韩国";
+			sourceTree = "<group>";
+		};
 		9022EC701D5C50B100C826B5 /* 专家会诊 */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +735,7 @@
 		90AD75841D61CA4E00CB7661 /* 镜 */ = {
 			isa = PBXGroup;
 			children = (
+				18C534A91DE7036100A20875 /* 直通韩国 */,
 				90AD757D1D61B05300CB7661 /* 委托担保 */,
 				9022EC701D5C50B100C826B5 /* 专家会诊 */,
 				90AD75851D61CA5C00CB7661 /* 争议调解 */,
@@ -706,6 +782,10 @@
 			children = (
 				905383651D65C53C007D722E /* ApplyFailRepairTableViewController.h */,
 				905383661D65C53C007D722E /* ApplyFailRepairTableViewController.m */,
+				18C534B71DE85CFC00A20875 /* FailRepairViewController.h */,
+				18C534B81DE85CFC00A20875 /* FailRepairViewController.m */,
+				185AF3A11DE986B000CB193E /* ApplyFailRepairViewController.h */,
+				185AF3A21DE986B000CB193E /* ApplyFailRepairViewController.m */,
 			);
 			name = "失败手术修复";
 			sourceTree = "<group>";
@@ -826,6 +906,8 @@
 			children = (
 				90E76BA11D59C95A008E6C82 /* MineTableViewController.h */,
 				90E76BA21D59C95A008E6C82 /* MineTableViewController.m */,
+				185AF3B01DEC22E800CB193E /* MyMedicalRecordListTableViewController.h */,
+				185AF3B11DEC22E800CB193E /* MyMedicalRecordListTableViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -835,6 +917,8 @@
 			children = (
 				9022EC7E1D5C6C4E00C826B5 /* UserInfo.h */,
 				9022EC7F1D5C6C4E00C826B5 /* UserInfo.m */,
+				185AF3AA1DEC1C9300CB193E /* MyMedicalRecordListInfo.h */,
+				185AF3AB1DEC1C9300CB193E /* MyMedicalRecordListInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -844,6 +928,8 @@
 			children = (
 				90E766AB1D599207008E6C82 /* MineServerInteraction.h */,
 				90E766AC1D599207008E6C82 /* MineServerInteraction.m */,
+				185AF3AD1DEC1EAF00CB193E /* MyServerInteraction.h */,
+				185AF3AE1DEC1EAF00CB193E /* MyServerInteraction.m */,
 			);
 			path = singleton;
 			sourceTree = "<group>";
@@ -851,6 +937,7 @@
 		90E766AD1D599207008E6C82 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				185AF3A41DEC16E500CB193E /* 我的病历 */,
 				9022EC6B1D5C1D6200C826B5 /* MineHeaderView.h */,
 				9022EC6C1D5C1D6200C826B5 /* MineHeaderView.m */,
 				9022EC6D1D5C1D6200C826B5 /* MineHeaderView.xib */,
@@ -895,6 +982,8 @@
 				18C5349F1DE68E3D00A20875 /* ProvincialInfo.m */,
 				18C534A41DE6D8F000A20875 /* FindClassifyInfo.h */,
 				18C534A51DE6D8F000A20875 /* FindClassifyInfo.m */,
+				185AF39E1DE93A7100CB193E /* GetCaseListInfo.h */,
+				185AF39F1DE93A7100CB193E /* GetCaseListInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1213,6 +1302,8 @@
 		DF1C94CD1D768336003D5114 /* collectionCell */ = {
 			isa = PBXGroup;
 			children = (
+				185AF3971DE92B8600CB193E /* 案例展示 */,
+				18C534AE1DE7C43200A20875 /* 直通韩国 */,
 				183C31261DDD9D5800C1BFA5 /* 专家会诊cell */,
 				DFE1EE461DD302A700227EB8 /* 中国好整形 */,
 				DF4077661DD2B5F200436FDF /* 首页功能cell */,
@@ -1512,6 +1603,7 @@
 				90E769F41D59B816008E6C82 /* Common.storyboard in Resources */,
 				90E76B2E1D59B816008E6C82 /* FontAwesome.otf in Resources */,
 				90E766B71D599207008E6C82 /* Main.storyboard in Resources */,
+				18C534B31DE7C53500A20875 /* KoreaDoctorTableViewCell.xib in Resources */,
 				90E76B261D59B816008E6C82 /* font-awesome.min.css in Resources */,
 				90E766BA1D599207008E6C82 /* Home.storyboard in Resources */,
 				90E76B2B1D59B816008E6C82 /* fontawesome-webfont.svg in Resources */,
@@ -1536,11 +1628,13 @@
 				DFE1EE4C1DD3030300227EB8 /* FaceLiftingTableViewCell.xib in Resources */,
 				DFF0682C1DE561FA00E1C244 /* Believe.storyboard in Resources */,
 				909BEDD41D598095007D7A7E /* Assets.xcassets in Resources */,
+				185AF39D1DE92BEA00CB193E /* CaseTableViewCell.xib in Resources */,
 				DF96C81C1D7569F8001E5C12 /* GarageAbilityTableViewCell.xib in Resources */,
 				90CDCBA61D5D59E700FF2B6D /* InputAccessoryView.xib in Resources */,
 				90E769FD1D59B816008E6C82 /* TZAssetCell.xib in Resources */,
 				90E76B291D59B816008E6C82 /* error.html in Resources */,
 				90E769FB1D59B816008E6C82 /* HZAreaPickerView.xib in Resources */,
+				185AF3A91DEC170C00CB193E /* MyCaseTableViewCell.xib in Resources */,
 				90E769F81D59B816008E6C82 /* Assets.xcassets in Resources */,
 				90E76B321D59B816008E6C82 /* glyphicons-halflings-regular.woff in Resources */,
 				90E76B351D59B816008E6C82 /* bootstrap.js in Resources */,
@@ -1567,6 +1661,7 @@
 				183C31241DDD83FD00C1BFA5 /* ConsultationCollectionViewController.m in Sources */,
 				90E76B3A1D59B816008E6C82 /* AppURL.m in Sources */,
 				DF9520B61DD9AC87008AFF41 /* FindDisplayInfo.m in Sources */,
+				185AF3AF1DEC1EAF00CB193E /* MyServerInteraction.m in Sources */,
 				18E4B82E1DDB015A00F78562 /* GuaranteeOrderViewController.m in Sources */,
 				DFFAC6CA1DE8366500A0F4A3 /* ExpertTableViewCell.m in Sources */,
 				DFE1EE4B1DD3030300227EB8 /* FaceLiftingTableViewCell.m in Sources */,
@@ -1575,6 +1670,7 @@
 				90CDCBA51D5D59E700FF2B6D /* InputAccessoryView.m in Sources */,
 				DFFAC6B91DE7EEE000A0F4A3 /* ExpertInfo.m in Sources */,
 				90AD756A1D615C3C00CB7661 /* YMJCommonServerInteraction.m in Sources */,
+				185AF39C1DE92BEA00CB193E /* CaseTableViewCell.m in Sources */,
 				90B56EC31D62D6E300E4232B /* ImageAddCollectionViewCell.m in Sources */,
 				90AD75831D61C0C500CB7661 /* SegmentedControlConfiger.m in Sources */,
 				9022EC5D1D5B0D0100C826B5 /* HomeTableViewController.m in Sources */,
@@ -1588,6 +1684,7 @@
 				90E76B601D59B831008E6C82 /* payRequsestHandler.mm in Sources */,
 				DFF068341DE563F800E1C244 /* VideoTableViewCell.m in Sources */,
 				DFE194611D7D574600791F8D /* VerDoctorFooterView.m in Sources */,
+				18C534B91DE85CFC00A20875 /* FailRepairViewController.m in Sources */,
 				900B00A61D5AE837003810C5 /* TabBarCenterView.m in Sources */,
 				DF13AABC1D7E63BB0062D35D /* VerifyFrameWorkTableViewController.m in Sources */,
 				9022EC801D5C6C4E00C826B5 /* UserInfo.m in Sources */,
@@ -1606,11 +1703,14 @@
 				90E76B3C1D59B816008E6C82 /* DataManager.m in Sources */,
 				DFFAC6B61DE7DD0600A0F4A3 /* AuctionProjectInfo.m in Sources */,
 				18CE18AA1DE5BF22007A1A3C /* DoctorViewController.m in Sources */,
+				18C534B21DE7C53500A20875 /* KoreaDoctorTableViewCell.m in Sources */,
 				90E76B971D59C2F7008E6C82 /* CommonEmptyListView.m in Sources */,
+				18C534AD1DE703B600A20875 /* ToKoreaViewController.m in Sources */,
 				90CDCBAE1D5D5CC300FF2B6D /* ForgetPasswordTableViewController.m in Sources */,
 				DF35FF771DE694EC0013E46D /* HospitalTableViewCell.m in Sources */,
 				183C312A1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.m in Sources */,
 				DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */,
+				185AF3A31DE986B000CB193E /* ApplyFailRepairViewController.m in Sources */,
 				90B56ECB1D62DC7E00E4232B /* ImagePickerManager.m in Sources */,
 				90E76B5F1D59B831008E6C82 /* ApiXml.mm in Sources */,
 				90AD75711D6163F300CB7661 /* LoginServerInteraction.m in Sources */,
@@ -1622,11 +1722,15 @@
 				18C534A01DE68E3D00A20875 /* ProvincialInfo.m in Sources */,
 				90AD75881D62A2BF00CB7661 /* DisputeResolveTableViewController.m in Sources */,
 				DFE194661D7D618C00791F8D /* VerDoctorWebViewController.m in Sources */,
+				185AF3AC1DEC1C9300CB193E /* MyMedicalRecordListInfo.m in Sources */,
 				DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */,
 				9022EC6E1D5C1D6200C826B5 /* MineHeaderView.m in Sources */,
 				DF96C81D1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.m in Sources */,
 				183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */,
 				DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */,
+				185AF3A01DE93A7100CB193E /* GetCaseListInfo.m in Sources */,
+				185AF3B21DEC22E800CB193E /* MyMedicalRecordListTableViewController.m in Sources */,
+				185AF3A81DEC170C00CB193E /* MyCaseTableViewCell.m in Sources */,
 				90E766B61D599207008E6C82 /* MainTabBarController.m in Sources */,
 				DFFAC6BC1DE7F88B00A0F4A3 /* AgencyInfo.m in Sources */,
 				90AD75741D61701200CB7661 /* HomePormptInfo.m in Sources */,

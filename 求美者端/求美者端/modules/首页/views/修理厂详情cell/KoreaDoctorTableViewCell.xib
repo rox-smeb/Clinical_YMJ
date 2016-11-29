@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="245" id="KGk-i7-Jjw" customClass="KoreaDoctorTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="306" height="245"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="306" height="244"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="08W-A2-YDA">
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="245"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjp-QP-EiT">
+                        <rect key="frame" x="0.0" y="184" width="306" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="张爱华" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3v-V1-sVI">
+                                <rect key="frame" x="8" y="0.0" width="49" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="主任医师" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgx-9M-dH7">
+                                <rect key="frame" x="59" y="0.0" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="医院名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOI-me-4mj">
+                                <rect key="frame" x="8" y="20" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="擅长项目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6t-ua-I8c">
+                                <rect key="frame" x="8" y="39" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Q2s-B4-vfY"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hzzx_04@x3" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-fA-98w">
+                        <rect key="frame" x="245" y="8" width="60" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="LqD-Nt-Y5V"/>
+                            <constraint firstAttribute="height" constant="18" id="One-MK-xeQ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="sjp-QP-EiT" secondAttribute="bottom" id="72I-R5-lID"/>
+                    <constraint firstAttribute="trailing" secondItem="08W-A2-YDA" secondAttribute="trailing" constant="1" id="Hmq-lR-Iwd"/>
+                    <constraint firstAttribute="bottom" secondItem="08W-A2-YDA" secondAttribute="bottom" id="Wz8-fu-BvH"/>
+                    <constraint firstItem="08W-A2-YDA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zmu-Lt-M7y"/>
+                    <constraint firstItem="yFl-fA-98w" firstAttribute="trailing" secondItem="08W-A2-YDA" secondAttribute="trailing" id="agi-Mu-O7V"/>
+                    <constraint firstAttribute="trailing" secondItem="sjp-QP-EiT" secondAttribute="trailing" id="buE-CO-2Le"/>
+                    <constraint firstItem="sjp-QP-EiT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nKG-5C-fpY"/>
+                    <constraint firstItem="yFl-fA-98w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nfD-y7-Ct6"/>
+                    <constraint firstItem="08W-A2-YDA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="v2t-CB-Tz6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="best" destination="H6t-ua-I8c" id="3hR-fS-elC"/>
+                <outlet property="dAgency" destination="MOI-me-4mj" id="pPG-Bq-uoE"/>
+                <outlet property="dTtile" destination="rgx-9M-dH7" id="wzp-DT-IdX"/>
+                <outlet property="doctorName" destination="q3v-V1-sVI" id="n5m-D2-xKd"/>
+                <outlet property="imageBigPath" destination="08W-A2-YDA" id="v1b-Bo-hC3"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="205.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="hzzx_04@x3" width="186" height="57"/>
+    </resources>
+</document>

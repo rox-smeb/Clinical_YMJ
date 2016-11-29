@@ -11,7 +11,7 @@
 #import "NotificationsDefine.h"
 #import "UserInfo.h"
 #import "ImagePickerManager.h"
-
+#import "MyMedicalRecordListTableViewController.h"
 #define CAMERA_IMAGE_MAX_SIZE      (400)
 
 @interface MineTableViewController () <UIScrollViewDelegate,
@@ -218,6 +218,11 @@
     if ([cell.restorationIdentifier isEqualToString:@"联系平台"])
     {
         [YBUtility callPhone:@"15636140539" superView:self.view];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的病历"])
+    {
+        MyMedicalRecordListTableViewController* ctrl=[MyMedicalRecordListTableViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
     }
 }
 

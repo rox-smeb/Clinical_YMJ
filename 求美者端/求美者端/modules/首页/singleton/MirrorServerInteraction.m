@@ -194,5 +194,48 @@ static MirrorServerInteraction *SINGLETON = nil;
       responseBlock:responseBlock];
     
 }
+//申请失败手术修复
+-(void)applyFailRepairWithuid:(NSString*)uid
+                         ukey:(NSString*)ukey
+                      project:(NSString*)project
+                   doctorName:(NSString*)doctorName
+                  doctorPhone:(NSString*)doctorPhone
+                       agency:(NSString*)agency
+                      contact:(NSString*)contact
+                 contactPhone:(NSString*)contactPhone
+                      content:(NSString*)content
+                     fileList:(NSArray<UIImage*>*)fileList
+                progressBlock:(ProgressUpdateBlock)progressBlock
+                responseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    [param addParam:uid forKey:@"uid"];
+    [param addParam:ukey forKey:@"ukey"];
+    [param addParam:project forKey:@"project"];
+    [param addParam:doctorName forKey:@"doctorName"];
+    [param addParam:doctorPhone forKey:@"doctorName"];
+    [param addParam:agency forKey:@"agency"];
+    [param addParam:contact forKey:@"contact"];
+    [param addParam:contactPhone forKey:@"contactPhone"];
+    [param addParam:content forKey:@"content"];
+    for (UIImage* image in fileList)
+    {
+        if ([image isKindOfClass:[UIImage class]])
+        {
+            NSData* data = UIImageJPEGRepresentation(image, 0.8f);
+            [param addUploadData:data named:@"file" type:@"jpeg"];
+        }
+    }
+    
+    [self invokeApi:[AppURL URLWithPath:@"Mirror" method:@"applyFailRepair"]
+             method:UPLOAD
+             params:param
+      infoMakeBlock:^id(YBServerResponseInfo *info, BOOL *ret) {
+          
+          return info;
+      }
+      progressBlock:progressBlock
+      responseBlock:responseBlock];
 
+}
 @end
