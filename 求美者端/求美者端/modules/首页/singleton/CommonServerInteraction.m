@@ -107,4 +107,22 @@ static CommonServerInteraction *SINGLETON = nil;
 
 }
 
+#pragma mark - 获取案例展示列表
+
+/**
+ *  获取案例展示列表
+ *
+ *  @param responseBlock 成功回调 (CommonInfo)
+ */
+- (void)getCaseListResponseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"getCaseList"]
+             method:GET
+       responseType:RESPONSE_INFO_LIST
+          itemClass:[GetCaseListInfo class]
+             params:param
+      responseBlock:responseBlock];
+}
 @end

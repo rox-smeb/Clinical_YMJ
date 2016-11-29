@@ -13,38 +13,6 @@
             timestampString = "501670540.225521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "-menu:numberOfRowsInColumn:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/DoctorViewController.m"
-            timestampString = "501670540.225521"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
-            landmarkName = "-menu:titleForItemsInRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/DoctorViewController.m"
-            timestampString = "501670540.225521"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
             landmarkName = "-loadFindClassifyInfo"
@@ -57,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/DoctorViewController.m"
-            timestampString = "501670540.225521"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/ToKoreaViewController.m"
+            timestampString = "501751861.544019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "-menu:titleForRowAtIndexPath:"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-loadFindSpecial"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +41,139 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/DoctorViewController.m"
-            timestampString = "501671597.416296"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/ToKoreaViewController.m"
+            timestampString = "501752222.07975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "-menu:titleForItemsInRowAtIndexPath:"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-loadData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/ApplyFailRepairTableViewController.h"
+            timestampString = "501990728.349141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/ApplyFailRepairViewController.m"
+            timestampString = "501991406.40235"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-onSubmitTouch:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/ApplyFailRepairTableViewController.m"
+            timestampString = "501991568.383216"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "-userFooterView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x6211;&#x7684;/controllers/MyMedicalRecordListTableViewController.m"
+            timestampString = "502020171.244489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "@implementation MyMedicalRecordListTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x6211;&#x7684;/controllers/MineTableViewController.m"
+            timestampString = "502017249.887113"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x6211;&#x7684;/controllers/MyMedicalRecordListTableViewController.m"
+            timestampString = "502020171.244489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-setup"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x6211;&#x7684;/controllers/MyMedicalRecordListTableViewController.m"
+            timestampString = "502020171.244489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-loadData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x6211;&#x7684;/controllers/MyMedicalRecordListTableViewController.m"
+            timestampString = "502020171.244489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

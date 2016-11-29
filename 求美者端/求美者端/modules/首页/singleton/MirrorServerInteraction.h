@@ -99,4 +99,18 @@
                               progressBlock:(ProgressUpdateBlock)progressBlock
                               responseBlock:(YBResponseBlock)responseBlock;
 
+//申请失败手术修复
+-(void)applyFailRepairWithuid:(NSString*)uid
+                                       ukey:(NSString*)ukey
+                      project:(NSString*)project
+                   doctorName:(NSString*)doctorName
+                   doctorPhone:(NSString*)doctorPhone
+                   agency:(NSString*)agency
+                   contact:(NSString*)contact
+                 contactPhone:(NSString*)contactPhone
+                 content:(NSString*)content
+                                   fileList:(NSArray<UIImage*>*)fileList
+                              progressBlock:(ProgressUpdateBlock)progressBlock
+                              responseBlock:(YBResponseBlock)responseBlock;
+
 @end

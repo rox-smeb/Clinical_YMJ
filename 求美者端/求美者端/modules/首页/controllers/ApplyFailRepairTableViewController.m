@@ -10,8 +10,11 @@
 #import "ImagePickerManager.h"
 #import "InputAccessoryView.h"
 #import "ImageAddCollectionViewCell.h"
-
+#import "GuaranteeOrderViewController.h"
 #import "YBCommonKit/UIPlaceHolderTextView.h"
+#import "UserInfo.h"
+#import "NotificationsDefine.h"
+#import "MirrorServerInteraction.h"
 
 #define MAX_IMAGE_PICKER_COUNT             (15)
 
@@ -19,7 +22,9 @@
                                                   UICollectionViewDataSource,
                                                   CHTCollectionViewDelegateWaterfallLayout,
                                                   ImagePickerManagerDelegate,
-                                                  ImageAddCollectionViewCellDelegate>
+                                                  ImageAddCollectionViewCellDelegate,
+                                                  ApplyFailRepairViewControllerDelegate>
+@property (weak, nonatomic) ApplyFailRepairViewController *parentVC;
 
 @property (strong, nonatomic) NSMutableArray* imageArray;
 @property (weak, nonatomic) IBOutlet UITextField *projectTextField;
@@ -30,7 +35,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *contactPhoneTextField;
 @property (weak, nonatomic) IBOutlet UIPlaceHolderTextView *contentTextView;
 @property (weak, nonatomic) IBOutlet UICollectionView *imageCollectionView;
-@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end
 
@@ -39,8 +43,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    _parentVC.delegate = self;
+
     [self setup];
+}
+- (void)setParent:(ApplyFailRepairViewController*)parent
+{
+    _parentVC = parent;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -59,9 +68,14 @@
 {
     [super didReceiveMemoryWarning];
 }
-
+- (void)close
+{
+    [self hideKeyboard];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)setup
 {
+
     self.imageArray = [NSMutableArray array];
     
     UINib* nib = [UINib nibWithNibName:[ImageAddCollectionViewCell className] bundle:nil];
@@ -73,7 +87,6 @@
     self.contentTextView.placeholder = @"请填写详细情况描述";
     [InputAccessoryView createWithInputView:self.contentTextView];
     
-    self.submitButton.layer.cornerRadius = 4.0f;
     
     CHTCollectionViewWaterfallLayout* layout = (CHTCollectionViewWaterfallLayout*)self.imageCollectionView.collectionViewLayout;
     if ([layout isKindOfClass:[CHTCollectionViewWaterfallLayout class]])
@@ -226,6 +239,70 @@ didDeleteAtIndexPath:(NSIndexPath*)indexPath
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     [cell solveCrashWithIOS7];
     return cell;
+}
+#pragma mark - SubmitDelegate
+
+-(void)userFooterView:(GuaranteeOrderViewController *)vc
+{
+    LOGIN_CHECK;
+    
+    
+    NSString* project      = self.projectTextField.text;
+    NSString* doctor       = self.doctorNameTextField.text;
+    NSString* doctorPhone  = self.doctorPhoneTextField.text;
+    NSString* agency       = self.agencyTextField.text;
+    NSString* contact = self.contactTextField.text;
+    NSString* contactPhone  = self.contactPhoneTextField.text;
+    NSString* content        = self.contentTextView.text;
+    
+    ShowHudAndReturnIfInputNotAvailable(project, @"请输入手术项目");
+    ShowHudAndReturnIfInputNotAvailable(doctor, @"请输入医生姓名");
+    ShowHudAndReturnIfInputNotAvailable(doctorPhone, @"请输入医生电话");
+    ShowHudAndReturnIfInputNotAvailable(agency, @"请输入医疗机构");
+    ShowHudAndReturnIfInputNotAvailable(contact, @"请输入医疗机构联系人");
+    ShowHudAndReturnIfInputNotAvailable(contactPhone, @"请输入医疗机构联系电话");
+    ShowHudAndReturnIfInputNotAvailable(content, @"请输入详细情况描述");
+    
+    UserInfo* info = [UserInfo currentUser];
+    
+    @weakify_self;
+    YB_RESPONSE_BLOCK_EX(block, NSObject*)
+    {
+        [MBProgressHUD hideHUDForView:weakSelf.view.superview animated:YES];
+        //[sender setEnabled:YES];
+        [response showHUD];
+        
+        if ([response success])
+        {
+            // 发送委托保单提交成功消息
+            [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_GUARANTEE_ORDER_SUBMIT_SUCCESS object:nil];
+            
+            [weakSelf close];
+        }
+    };
+    
+    [self hideKeyboard];
+    
+    MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:self.view.superview animated:YES];
+    hud.labelText = STRING_PROCESSING;
+    // [sender setEnabled:NO];
+    
+    [[MirrorServerInteraction sharedInstance] applyFailRepairWithuid:info.uid
+                                                                ukey:info.ukey
+                                                             project:project
+                                                          doctorName:doctor
+                                                         doctorPhone:doctorPhone
+                                                              agency:agency
+                                                             contact:contact
+                                                        contactPhone:contactPhone
+                                                             content:content
+                                                            fileList: self.imageArray
+                                                       progressBlock:^(double progress) {
+                                                           
+                                                           hud.labelText = [NSString stringWithFormat:@"正在上传佐证资料 %0.1f%%", progress * 100.0f];
+                                                       }
+                                                       responseBlock:block];
+    
 }
 
 @end

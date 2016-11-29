@@ -12,6 +12,7 @@
 #import "FindSpecialInfo.h"
 #import "VideoInfo.h"
 #import "FindClassifyInfo.h"
+#import "GetCaseListInfo.h"
 @interface CommonServerInteraction : YBServerInteraction
 
 + (CommonServerInteraction*)sharedInstance;
@@ -60,5 +61,13 @@
                      newset:(NSString*)newset
               responseBlock:(YBResponseBlock)responseBlock;
 
+#pragma mark - 获取案例展示列表
+
+/**
+ *  获取案例展示列表
+ *
+ *  @param responseBlock 成功回调 (CommonInfo)
+ */
+- (void)getCaseListResponseBlock:(YBResponseBlock)responseBlock;
 
 @end

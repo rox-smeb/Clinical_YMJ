@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ApplyFailRepairViewController.h"
 @interface ApplyFailRepairTableViewController : UITableViewController
+- (void)setParent:(ApplyFailRepairViewController*)parent;
 
 @end

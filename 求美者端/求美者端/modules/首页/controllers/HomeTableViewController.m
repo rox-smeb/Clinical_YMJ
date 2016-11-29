@@ -23,8 +23,8 @@
 #import "DisputeResolveViewController.h"
 #import "ConsultationCollectionViewController.h"
 #import "BecomeBeautifulViewController.h"
-
-
+#import "ToKoreaViewController.h"
+#import "FailRepairViewController.h"
 @interface HomeTableViewController ()<UITableViewDelegate,
                                       UITableViewDataSource,
                                       UINavigationControllerDelegate,
@@ -274,13 +274,18 @@
 // 失败手术修复
 - (void)didSelectSurgeryRepair
 {
-
+    [self.navigationController.navigationBar setHidden:NO];
+    FailRepairViewController* ctrl=[FailRepairViewController viewController];
+    [self.navigationController pushViewController:ctrl animated:YES];
+    
 }
 
 // 直通韩国
 - (void)didSelectGoToKorea
 {
-
+    [self.navigationController.navigationBar setHidden:NO];
+    ToKoreaViewController* ctrl=[ToKoreaViewController viewController];
+    [self.navigationController pushViewController:ctrl animated:YES];
 }
 
 // 专家咨询
