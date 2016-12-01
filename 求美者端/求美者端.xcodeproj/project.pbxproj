@@ -162,6 +162,8 @@
 		DF96C81E1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF96C8171D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.xib */; };
 		DF96C81F1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF96C8191D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m */; };
 		DF96C8201D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF96C81A1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib */; };
+		DFBD197D1DEEAD0500A94988 /* AuctionProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBD197B1DEEAD0500A94988 /* AuctionProjectTableViewCell.m */; };
+		DFBD197E1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD197C1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib */; };
 		DFE194581D7D551E00791F8D /* VerDoctorWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE194571D7D551E00791F8D /* VerDoctorWebTableViewController.m */; };
 		DFE1945D1D7D56D300791F8D /* VerDoctorWebTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE1945B1D7D56D300791F8D /* VerDoctorWebTableViewCell.m */; };
 		DFE1945E1D7D56D300791F8D /* VerDoctorWebTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE1945C1D7D56D300791F8D /* VerDoctorWebTableViewCell.xib */; };
@@ -429,6 +431,9 @@
 		DF96C8181D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GarageAbilityItemCollectionViewCell.h; sourceTree = "<group>"; };
 		DF96C8191D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GarageAbilityItemCollectionViewCell.m; sourceTree = "<group>"; };
 		DF96C81A1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GarageAbilityItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		DFBD197A1DEEAD0500A94988 /* AuctionProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuctionProjectTableViewCell.h; sourceTree = "<group>"; };
+		DFBD197B1DEEAD0500A94988 /* AuctionProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuctionProjectTableViewCell.m; sourceTree = "<group>"; };
+		DFBD197C1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuctionProjectTableViewCell.xib; sourceTree = "<group>"; };
 		DFE194561D7D551E00791F8D /* VerDoctorWebTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerDoctorWebTableViewController.h; sourceTree = "<group>"; };
 		DFE194571D7D551E00791F8D /* VerDoctorWebTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerDoctorWebTableViewController.m; sourceTree = "<group>"; };
 		DFE1945A1D7D56D300791F8D /* VerDoctorWebTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerDoctorWebTableViewCell.h; sourceTree = "<group>"; };
@@ -709,6 +714,7 @@
 		90AD75671D615BC900CB7661 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DFBD19781DEEACD700A94988 /* 项目拍卖cell */,
 				DFFAC6C11DE835E700A0F4A3 /* 医生cell */,
 				DF35FF731DE694760013E46D /* 机构cell */,
 				DF8F84FE1D7963E3006D7EB5 /* CommonSelectTableSectionHeader.h */,
@@ -1407,6 +1413,16 @@
 			path = private;
 			sourceTree = "<group>";
 		};
+		DFBD19781DEEACD700A94988 /* 项目拍卖cell */ = {
+			isa = PBXGroup;
+			children = (
+				DFBD197A1DEEAD0500A94988 /* AuctionProjectTableViewCell.h */,
+				DFBD197B1DEEAD0500A94988 /* AuctionProjectTableViewCell.m */,
+				DFBD197C1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib */,
+			);
+			name = "项目拍卖cell";
+			sourceTree = "<group>";
+		};
 		DFE194551D7D54F100791F8D /* 验医生 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1617,6 +1633,7 @@
 				DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */,
 				90E76B2C1D59B816008E6C82 /* fontawesome-webfont.ttf in Resources */,
 				DFFAC6CB1DE8366500A0F4A3 /* ExpertTableViewCell.xib in Resources */,
+				DFBD197E1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib in Resources */,
 				90E76B2A1D59B816008E6C82 /* fontawesome-webfont.eot in Resources */,
 				90E76B391D59B816008E6C82 /* respond.min.js in Resources */,
 				90E76B981D59C2F7008E6C82 /* CommonEmptyListView.xib in Resources */,
@@ -1726,6 +1743,7 @@
 				DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */,
 				9022EC6E1D5C1D6200C826B5 /* MineHeaderView.m in Sources */,
 				DF96C81D1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.m in Sources */,
+				DFBD197D1DEEAD0500A94988 /* AuctionProjectTableViewCell.m in Sources */,
 				183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */,
 				DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */,
 				185AF3A01DE93A7100CB193E /* GetCaseListInfo.m in Sources */,

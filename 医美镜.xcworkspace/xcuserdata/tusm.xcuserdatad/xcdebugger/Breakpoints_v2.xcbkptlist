@@ -42,12 +42,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x901a;&#x7528;/controllers/BecomeBeautifulSubViewController.m"
-            timestampString = "502103861.240773"
+            timestampString = "502266319.591932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "348"
+            endingLineNumber = "348"
+            landmarkName = "-loadCityListWithCid:pid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x901a;&#x7528;/controllers/BecomeBeautifulViewController.m"
+            timestampString = "502266319.591932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
+            landmarkName = "-menu:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x901a;&#x7528;/controllers/BecomeBeautifulSubViewController.m"
+            timestampString = "502266305.530611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-setup"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x901a;&#x7528;/controllers/BecomeBeautifulSubViewController.m"
+            timestampString = "502266311.572754"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-setParent:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

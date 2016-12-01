@@ -84,7 +84,7 @@
         }
         else
         {
-            self.degree.text = [NSString stringWithFormat:@"%@%%",expertInfo.degree];
+            self.degree.text = [NSString stringWithFormat:@"%.1f%%",[expertInfo.degree floatValue]];
             [self.pro1 setProgress:[expertInfo.degree floatValue]/100 animated:YES];
         }
         

@@ -27,6 +27,9 @@
 @property (strong, nonatomic) NSArray* provincialInfoArray;                 // 省市
 @property (strong, nonatomic) NSArray* classifyInfoArray;                   // 项目分类
 
+
+@property (weak, nonatomic) BecomeBeautifulSubViewController *subViewController;
+
 @end
 
 @implementation BecomeBeautifulViewController
@@ -80,6 +83,8 @@
     self.tabedData = @[@"项目拍卖行",
                        @"医生",
                        @"机构"];
+//    self.tabedData = @[@"项目拍卖行",
+//                       @"医生"];
     
     // 计算平均item的宽度
     CGFloat perItemWidth = [UIScreen screenWidth] / [self.tabedData count];
@@ -190,6 +195,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+//    if ([segue.destinationViewController isKindOfClass:[BecomeBeautifulSubViewController class]])
+//    {
+//        self.subViewController = (BecomeBeautifulSubViewController*)segue.destinationViewController;
+//        [self.subViewController setParent:self];
+//    }
 }
 
 #pragma mark - DLCustomSlideViewDelegate
@@ -203,6 +213,7 @@
 {
     BecomeBeautifulSubViewController* sub = [self.storyboard instantiateViewControllerWithIdentifier:[BecomeBeautifulSubViewController className]];
     sub.itemTag =  index;
+    [sub setParent:self];
     return sub;
 }
 
@@ -334,7 +345,45 @@
 
 - (void)menu:(DOPDropDownMenu *)menu didSelectRowAtIndexPath:(DOPIndexPath *)indexPath
 {
-    
+    if (indexPath.column == 0 && self.provincialInfoArray != nil)
+    {
+        if (indexPath.item >= 0 && indexPath.row < [self.provincialInfoArray count])
+        {
+            CommonInfo* info = [self.provincialInfoArray objectAtIndex:indexPath.row];
+            self.cid = info.cid;
+            if ([info isKindOfClass:[CommonInfo class]]   &&
+                [info.province isKindOfClass:[NSArray class]] &&
+                indexPath.item < [info.province count])
+            {
+                ProvinceInfo* cityInfo = [info.province objectAtIndex:indexPath.item];
+                self.pid = cityInfo.pid;
+                if ([self.delegate respondsToSelector:@selector(loadCityListWithCid:pid:)])
+                {
+                    NSLog(@"123");
+                    [self.delegate loadCityListWithCid:self.cid pid:self.pid];
+                }
+            }
+        }
+    }
+    if (indexPath.column == 1 && self.classifyInfoArray != nil)
+    {
+        if (indexPath.row < [self.classifyInfoArray count])
+        {
+            FindClassifyInfo* info = [self.classifyInfoArray objectAtIndex:indexPath.row];
+            self.fid = info.pId;
+            if ([info isKindOfClass:[FindClassifyInfo class]]   &&
+                [info.cList isKindOfClass:[NSArray class]] &&
+                indexPath.item < [info.cList count])
+            {
+                ClassifyChildInfo* cityInfo = [info.cList objectAtIndex:indexPath.item];
+                self.oid = cityInfo.cId;
+                if ([self.delegate respondsToSelector:@selector(loadProjectListWithFid:oid:)])
+                {
+                    [self.delegate loadProjectListWithFid:self.fid oid:self.oid];
+                }
+            }
+        }
+    }
 }
 
 @end

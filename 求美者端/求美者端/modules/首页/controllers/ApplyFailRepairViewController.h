@@ -14,6 +14,7 @@
 - (void)userFooterView:(ApplyFailRepairViewController *)vc;
 
 @end
+
 @interface ApplyFailRepairViewController : UIViewController
 @property (weak, nonatomic) id<ApplyFailRepairViewControllerDelegate> delegate;
 

@@ -11,19 +11,27 @@
 #import "BeautyServerInteraction.h"
 #import "HospitalTableViewCell.h"
 #import "ExpertTableViewCell.h"
+#import "AuctionProjectTableViewCell.h"
 
 #define ITEM_TAG_AUCTIONPROJECT                 (0)
 #define ITEM_TAG_EXPERT                         (1)
 #define ITEM_TAG_AGENCY                         (2)
 
 
-@interface BecomeBeautifulSubViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface BecomeBeautifulSubViewController ()<UITableViewDelegate, UITableViewDataSource, BecomeBeautifulViewControllerDelegate>
+
+@property (weak, nonatomic) BecomeBeautifulViewController *parentVC;
 
 @property (weak, nonatomic) IBOutlet UITableView *beautifulTableView;
 
 @property (strong, nonatomic) NSMutableArray *auctionProData;
 @property (strong, nonatomic) NSMutableArray *expertData;
 @property (strong, nonatomic) NSMutableArray *agencyData;
+
+@property (strong, nonatomic) NSString* countryId;                                  // 国家id
+@property (strong, nonatomic) NSString* provinceId;                                 // 省id
+@property (strong, nonatomic) NSString* projectId;                                  // 项目id
+@property (strong, nonatomic) NSString* classifyId;                                 // 具体项目id
 
 @end
 
@@ -32,8 +40,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self setup];
     [self loadData];
+}
+
+- (void)setParent:(BecomeBeautifulViewController*)parent
+{
+    _parentVC = parent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,11 +60,21 @@
     self.expertData = [[NSMutableArray alloc] initWithCapacity:0];
     self.agencyData = [[NSMutableArray alloc] initWithCapacity:0];
     
+    _parentVC.delegate = self;
+    
     [self.beautifulTableView removeSeperatorBlank];              // 删除 前面的 空白
     [self.beautifulTableView removeRedundanceSeperator];         // 删除 多余的线
     
     [self.beautifulTableView registerNibName:[HospitalTableViewCell className] cellID:[HospitalTableViewCell className]];
     [self.beautifulTableView registerNibName:[ExpertTableViewCell className] cellID:[ExpertTableViewCell className]];
+    [self.beautifulTableView registerNibName:[AuctionProjectTableViewCell className] cellID:[AuctionProjectTableViewCell className]];
+    
+    [CommonEmptyListView configTableView:self.beautifulTableView emptyText:@"暂无相关信息"];
+
+    [self.beautifulTableView nlHeaderRefreshWithTarget:self action:@selector(loadData)];
+    [self.beautifulTableView nlFooterRefreshWithTarget:self action:@selector(loadMore)];
+
+
 }
 
 #pragma mark - 加载数据
@@ -62,10 +86,18 @@
         @weakify_self;
         YB_RESPONSE_BLOCK_EX(block, NSArray<AuctionProjectInfo*>*)
         {
+            [weakSelf.beautifulTableView nlHeaderEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
             if ([response success])
             {
-                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
                 [response showHUD];
+                
+                [weakSelf.auctionProData removeAllObjects];
+                [weakSelf.auctionProData frontInsertArray:dataOrList];
+                [weakSelf.beautifulTableView reloadData];
+
             }
             else
             {
@@ -73,13 +105,17 @@
             }
         };
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = STRING_LOADING;
+        if ([self.beautifulTableView nlHeaderIsRefresh] == NO)
+        {
+            MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText = STRING_LOADING;
+        }
         
         [[BeautyServerInteraction sharedInstance] findAuctionProjectWithSort_id:0
                                                                          newset:@"true"
-                                                                     classifyId:@""
-                                                                      countryId:@"1"
-                                                                     provinceId:@""
+                                                                     classifyId:self.classifyId
+                                                                      countryId:self.countryId
+                                                                     provinceId:self.provinceId
                                                                           isHot:@""
                                                                         keyWord:@""
                                                                   responseBlock:block];
@@ -94,6 +130,7 @@
             if ([response success])
             {
                 [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                [weakSelf.beautifulTableView nlHeaderEndRefresh];
                 [response showHUD];
                 
                 [weakSelf.expertData removeAllObjects];
@@ -106,14 +143,18 @@
             }
         };
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = STRING_LOADING;
+        if ([self.beautifulTableView nlHeaderIsRefresh] == NO)
+        {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = STRING_LOADING;
+        }
+
         
         [[BeautyServerInteraction sharedInstance] findExpertWithSort_id:0
                                                                  newset:@"true"
-                                                             classifyId:@""
-                                                              projectId:@""
-                                                              countryId:@"1"
-                                                             provinceId:@""
+                                                             classifyId:_classifyId
+                                                              projectId:_projectId
+                                                              countryId:_countryId
+                                                             provinceId:_provinceId
                                                               queryType:@"0"
                                                                 keyWord:@""
                                                           responseBlock:block];
@@ -125,9 +166,11 @@
         @weakify_self;
         YB_RESPONSE_BLOCK_EX(block, NSArray<AgencyInfo*>*)
         {
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+            [weakSelf.beautifulTableView nlHeaderEndRefresh];
+
             if ([response success])
             {
-                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
                 [response showHUD];
                 
                 [weakSelf.agencyData removeAllObjects];
@@ -141,17 +184,181 @@
             }
         };
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = STRING_LOADING;
+        if ([self.beautifulTableView nlHeaderIsRefresh] == NO)
+        {
+            MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText = STRING_LOADING;
+        }
+        
         
         [[BeautyServerInteraction sharedInstance] findAgencyWithSort_id:@"0"
                                                                  newset:@"true"
-                                                             classifyId:@""
-                                                              countryId:@"1"
-                                                             provinceId:@""
+                                                             classifyId:_classifyId
+                                                              countryId:_countryId
+                                                             provinceId:_provinceId
                                                                 keyWord:@""
                                                           responseBlock:block];
     }
 }
+
+- (void)loadMore
+{
+    // 项目竞拍列表
+    if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
+    {
+        AuctionProjectInfo* last = [self.auctionProData lastObject];
+        if (last == nil || last.sort_id == nil)
+        {
+            [self.beautifulTableView nlFooterEndRefresh];
+            return;
+        }
+        
+        NSString *sort_id = [NSString stringWithFormat:@"-%@", last.sort_id];
+
+        @weakify_self;
+        YB_RESPONSE_BLOCK_EX(block, NSArray<AuctionProjectInfo*>*)
+        {
+            if ([response isCachedResponse])
+            {
+                return;
+            }
+            
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
+            if ([response success])
+            {
+                if ([weakSelf.auctionProData backInsertArray:dataOrList])
+                {
+                    [weakSelf.beautifulTableView reloadData];
+                    [SVProgressHUD showSuccessWithStatus:@"全部数据加载完毕"];
+                }
+            }
+            else
+            {
+                [response showHUD];
+            }
+        };
+        
+        [[BeautyServerInteraction sharedInstance] findAuctionProjectWithSort_id:sort_id
+                                                                         newset:@"true"
+                                                                     classifyId:self.classifyId
+                                                                      countryId:self.countryId
+                                                                     provinceId:self.provinceId
+                                                                          isHot:@""
+                                                                        keyWord:@""
+                                                                  responseBlock:block];
+    }
+    
+    // 医生列表
+    else if (self.itemTag == ITEM_TAG_EXPERT)
+    {
+        ExpertInfo* last = [self.expertData lastObject];
+        if (last == nil || last.sort_id == nil)
+        {
+            [self.beautifulTableView nlFooterEndRefresh];
+            return;
+        }
+        
+        NSString *sort_id = [NSString stringWithFormat:@"-%@", last.sort_id];
+
+        @weakify_self;
+        YB_RESPONSE_BLOCK_EX(block, NSArray<ExpertInfo*>*)
+        {
+            if ([response isCachedResponse])
+            {
+                return;
+            }
+            
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
+            if ([response success])
+            {
+                if ([weakSelf.expertData backInsertArray:dataOrList])
+                {
+                    [weakSelf.beautifulTableView reloadData];
+                }
+                [SVProgressHUD showSuccessWithStatus:@"全部数据加载完毕"];
+            }
+            else
+            {
+                [response showHUD];
+            }
+        };
+
+        [[BeautyServerInteraction sharedInstance] findExpertWithSort_id:sort_id
+                                                                 newset:@"true"
+                                                             classifyId:_classifyId
+                                                              projectId:_projectId
+                                                              countryId:_countryId
+                                                             provinceId:_provinceId
+                                                              queryType:@"0"
+                                                                keyWord:@""
+                                                          responseBlock:block];
+    }
+    
+    // 机构列表
+    else if (self.itemTag == ITEM_TAG_AGENCY)
+    {
+        AgencyInfo* last = [self.agencyData lastObject];
+        if (last == nil || [last.sort_id isEqualToString: @"0"])
+        {
+            [self.beautifulTableView nlFooterEndRefresh];
+            return;
+        }
+
+        @weakify_self;
+        YB_RESPONSE_BLOCK_EX(block, NSArray<AgencyInfo*>*)
+        {
+            if ([response isCachedResponse])
+            {
+                return;
+            }
+            
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
+            if ([response success])
+            {
+                if ([weakSelf.agencyData backInsertArray:dataOrList])
+                {
+                    [weakSelf.beautifulTableView reloadData];
+                }
+                [SVProgressHUD showSuccessWithStatus:@"全部数据加载完毕"];
+            }
+            else
+            {
+                [response showHUD];
+            }
+        };
+
+        NSString *sort_id = [NSString stringWithFormat:@"-%@", last.sort_id];
+        [[BeautyServerInteraction sharedInstance] findAgencyWithSort_id:sort_id
+                                                                 newset:@"true"
+                                                             classifyId:_classifyId
+                                                              countryId:_countryId
+                                                             provinceId:_provinceId
+                                                                keyWord:@""
+                                                          responseBlock:block];
+    }
+}
+
+#pragma mark - BecomeBeautifulViewControllerDelegate
+- (void)loadCityListWithCid:(NSString *)cid pid:(NSString *)pid
+{
+    self.countryId = cid;
+    self.provinceId = pid;
+    [self.beautifulTableView nlHeaderBeginRefresh];
+}
+
+- (void)loadProjectListWithFid:(NSString *)fid oid:(NSString *)oid
+{
+    self.projectId = fid;
+    self.classifyId = oid;
+    [self.beautifulTableView nlHeaderBeginRefresh];
+}
+
 
 #pragma mark - UITableViewDelegate
 
@@ -160,7 +367,7 @@
     // 项目竞拍列表
     if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
     {
-        return [HospitalTableViewCell height];
+        return [AuctionProjectTableViewCell height];
     }
     
     // 医生列表
@@ -199,7 +406,7 @@
     // 项目竞拍列表
     if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
     {
-        return 0;
+        return [self.auctionProData count];
     }
     
     // 医生列表
@@ -221,7 +428,20 @@
     // 项目竞拍列表
     if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
     {
-
+        AuctionProjectTableViewCell *auctionCell = [tableView dequeueReusableCellWithIdentifier:[AuctionProjectTableViewCell className] forIndexPath:indexPath];
+        [auctionCell solveCrashWithIOS7];
+        [auctionCell removeSeperatorBlank];
+        if (indexPath.row < [self.auctionProData count])
+        {
+            AuctionProjectInfo* info = [self.auctionProData objectAtIndex:indexPath.row];
+            [auctionCell setUpWithAuctionProjectInfo:info];
+            if ([info.urlList isKindOfClass:[NSArray class]] && indexPath.row < [info.urlList count])
+            {
+                AuctionProUrlInfo* rInfo = [info.urlList objectAtIndex:indexPath.row];
+                [auctionCell setupWithInfo:info orderInfo:rInfo];
+            }
+        }
+        return auctionCell;
     }
     
     // 医生列表

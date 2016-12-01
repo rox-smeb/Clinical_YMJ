@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BecomeBeautifulViewController.h"
 
 @interface BecomeBeautifulSubViewController : UIViewController
 
 @property (nonatomic, assign) NSInteger itemTag;
+
+- (void)setParent:(BecomeBeautifulViewController*)parent;
 
 @end
