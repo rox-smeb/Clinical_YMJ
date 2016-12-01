@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainTabBarController.h"
+#import "WSMovieController.h"
 #import "JPUSHService.h"
 
 #import <Bugly/Bugly.h>
@@ -236,10 +237,38 @@
     }
     else
     {
-        MainTabBarController* ctrl = [MainTabBarController viewController];
-        self.window.rootViewController = ctrl;
+//        MainTabBarController* ctrl = [MainTabBarController viewController];
+//        self.window.rootViewController = ctrl;
+        WSMovieController *wsCtrl = [[WSMovieController alloc]init];
+        wsCtrl.movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"media"ofType:@"mp4"]];
+        self.window.rootViewController = wsCtrl;
+
+        
     }
     [self.window makeKeyAndVisible];
+}
+
+#pragma mark - 进入app播放视频
+- (void)configPlayVideo
+{
+    //    BOOL isFirstLogin = [[[NSUserDefaults standardUserDefaults] objectForKey:@"isFirstLogin"] boolValue];
+    //    if (!isFirstLogin) {
+    //        //是第一次
+    //        self.window.rootViewController = [[WSMovieController alloc]init];
+    //        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirstLogin"];
+    //    }else{
+    //        //不是首次启动
+    //        MainTabBarController *viewCtrl = [MainTabBarController viewController];
+    //        self.window.rootViewController = viewCtrl;
+    //    }
+    
+    
+    //是第一次
+    WSMovieController *wsCtrl = [[WSMovieController alloc]init];
+    wsCtrl.movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"media"ofType:@"mp4"]];
+    self.window.rootViewController = wsCtrl;
+    //[[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"isFirstLogin"];
+    
 }
 
 @end

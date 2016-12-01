@@ -146,6 +146,8 @@
 		DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4077621DD2B5D000436FDF /* FunctionTableViewCell.xib */; };
 		DF5C36FA1DE5703D00082629 /* VideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C36F91DE5703D00082629 /* VideoInfo.m */; };
 		DF5C37021DE5777800082629 /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C37011DE5777800082629 /* PlayVideoViewController.m */; };
+		DF872C8F1DF0106000CBDB23 /* WSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF872C8E1DF0106000CBDB23 /* WSMovieController.m */; };
+		DF872C931DF0108300CBDB23 /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF872C921DF0108300CBDB23 /* media.mp4 */; };
 		DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */; };
 		DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84F31D79527B006D7EB5 /* CommonInfo.m */; };
 		DF8F84FC1D795CD9006D7EB5 /* SecondLevelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84FB1D795CD9006D7EB5 /* SecondLevelListViewController.m */; };
@@ -403,6 +405,9 @@
 		DF5C36F91DE5703D00082629 /* VideoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoInfo.m; sourceTree = "<group>"; };
 		DF5C37001DE5777800082629 /* PlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoViewController.h; sourceTree = "<group>"; };
 		DF5C37011DE5777800082629 /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
+		DF872C8D1DF0106000CBDB23 /* WSMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMovieController.h; sourceTree = "<group>"; };
+		DF872C8E1DF0106000CBDB23 /* WSMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMovieController.m; sourceTree = "<group>"; };
+		DF872C921DF0108300CBDB23 /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
 		DF8F84EE1D794F8B006D7EB5 /* CommonServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonServerInteraction.h; sourceTree = "<group>"; };
 		DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonServerInteraction.m; sourceTree = "<group>"; };
 		DF8F84F21D79527B006D7EB5 /* CommonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonInfo.h; path = "../../首页/models/CommonInfo.h"; sourceTree = "<group>"; };
@@ -1020,6 +1025,7 @@
 		90E766BC1D599268008E6C82 /* 3thpart */ = {
 			isa = PBXGroup;
 			children = (
+				DF872C911DF0106C00CBDB23 /* 启动视频 */,
 			);
 			path = 3thpart;
 			sourceTree = "<group>";
@@ -1368,6 +1374,16 @@
 			name = "视频播放";
 			sourceTree = "<group>";
 		};
+		DF872C911DF0106C00CBDB23 /* 启动视频 */ = {
+			isa = PBXGroup;
+			children = (
+				DF872C921DF0108300CBDB23 /* media.mp4 */,
+				DF872C8D1DF0106000CBDB23 /* WSMovieController.h */,
+				DF872C8E1DF0106000CBDB23 /* WSMovieController.m */,
+			);
+			name = "启动视频";
+			sourceTree = "<group>";
+		};
 		DF8F84F91D795CCE006D7EB5 /* 城市列表选择 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1605,6 +1621,7 @@
 				DF96C81E1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.xib in Resources */,
 				90E769F91D59B816008E6C82 /* AYBGroupTableViewCell.xib in Resources */,
 				90E76B311D59B816008E6C82 /* glyphicons-halflings-regular.ttf in Resources */,
+				DF872C931DF0108300CBDB23 /* media.mp4 in Resources */,
 				DFE1945E1D7D56D300791F8D /* VerDoctorWebTableViewCell.xib in Resources */,
 				90B56EC41D62D6E300E4232B /* ImageAddCollectionViewCell.xib in Resources */,
 				90E76B2D1D59B816008E6C82 /* fontawesome-webfont.woff in Resources */,
@@ -1724,6 +1741,7 @@
 				90E76B971D59C2F7008E6C82 /* CommonEmptyListView.m in Sources */,
 				18C534AD1DE703B600A20875 /* ToKoreaViewController.m in Sources */,
 				90CDCBAE1D5D5CC300FF2B6D /* ForgetPasswordTableViewController.m in Sources */,
+				DF872C8F1DF0106000CBDB23 /* WSMovieController.m in Sources */,
 				DF35FF771DE694EC0013E46D /* HospitalTableViewCell.m in Sources */,
 				183C312A1DDD9DF300C1BFA5 /* DoctorCollectionViewCell.m in Sources */,
 				DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */,
