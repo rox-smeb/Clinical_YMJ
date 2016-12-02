@@ -25,7 +25,10 @@
 @property (strong, nonatomic) NSString* aName;                      // 机构名称
 @property (strong, nonatomic) NSString* aType;                      // 机构经营性质
 @property (strong, nonatomic) NSString* dId;                        // 医生ID
+@property (strong, nonatomic) NSString* nProjec;                    // 剩余名额
+@property (strong, nonatomic) NSString* oPrice;                     // 原价
 @property (strong, nonatomic) NSMutableArray<AuctionProUrlInfo*>* urlList;                     // 项目图片列表
 @property (strong, nonatomic) NSString* sort_id;                    // 分页计数编号
+@property (strong, nonatomic) NSString* webUrl;                     // 这是干什么的？
 
 @end

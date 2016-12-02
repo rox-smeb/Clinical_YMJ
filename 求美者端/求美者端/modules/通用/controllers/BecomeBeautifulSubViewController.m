@@ -219,21 +219,22 @@
         @weakify_self;
         YB_RESPONSE_BLOCK_EX(block, NSArray<AuctionProjectInfo*>*)
         {
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+            
             if ([response isCachedResponse])
             {
                 return;
             }
-            
-            [weakSelf.beautifulTableView nlFooterEndRefresh];
-            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
 
             if ([response success])
             {
+                
                 if ([weakSelf.auctionProData backInsertArray:dataOrList])
                 {
                     [weakSelf.beautifulTableView reloadData];
-                    [SVProgressHUD showSuccessWithStatus:@"全部数据加载完毕"];
                 }
+                [SVProgressHUD showSuccessWithStatus:@"全部数据加载完毕"];
             }
             else
             {
@@ -266,13 +267,14 @@
         @weakify_self;
         YB_RESPONSE_BLOCK_EX(block, NSArray<ExpertInfo*>*)
         {
+            
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+            
             if ([response isCachedResponse])
             {
                 return;
             }
-            
-            [weakSelf.beautifulTableView nlFooterEndRefresh];
-            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
 
             if ([response success])
             {
@@ -312,14 +314,14 @@
         @weakify_self;
         YB_RESPONSE_BLOCK_EX(block, NSArray<AgencyInfo*>*)
         {
+            [weakSelf.beautifulTableView nlFooterEndRefresh];
+            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+
             if ([response isCachedResponse])
             {
                 return;
             }
             
-            [weakSelf.beautifulTableView nlFooterEndRefresh];
-            [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-
             if ([response success])
             {
                 if ([weakSelf.agencyData backInsertArray:dataOrList])

@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *auctionPrice;
+@property (weak, nonatomic) IBOutlet UILabel *oPrice;
+@property (weak, nonatomic) IBOutlet UILabel *num;
 
 @property (strong, nonatomic) AuctionProjectInfo* auctionProjectInfo;
 @property (strong, nonatomic) AuctionProUrlInfo* auctionProUrlInfo;
@@ -24,7 +26,7 @@
 
 + (CGFloat)height
 {
-    return 125.0f;
+    return 153.0f;
 }
 
 - (void)awakeFromNib {
@@ -44,9 +46,12 @@
     {
         self.auctionProjectInfo = auctionProjectInfo;
         
+        
         self.name.text = auctionProjectInfo.name;
         self.price.text = auctionProjectInfo.price;
-        self.auctionPrice.text = auctionProjectInfo.fPrice;
+        self.auctionPrice.text = [NSString stringWithFormat:@"%@¥", auctionProjectInfo.fPrice];
+        self.num.text = auctionProjectInfo.nProjec;
+        self.oPrice.text = [NSString stringWithFormat:@"%0.2f", [auctionProjectInfo.oPrice floatValue]];
         
 //        NSURL* url = [NSURL URLWithString:auctionProjectInfo.url];
 //        [self.url sd_setImageWithURL:url placeholderImage:DEFAULT_IMAGE];
