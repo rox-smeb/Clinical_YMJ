@@ -178,6 +178,7 @@
 		DFF068301DE562C000E1C244 /* BelieveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0682F1DE562C000E1C244 /* BelieveTableViewController.m */; };
 		DFF068341DE563F800E1C244 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF068321DE563F800E1C244 /* VideoTableViewCell.m */; };
 		DFF068351DE563F800E1C244 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */; };
+		DFF3962F1DF1190B00D38BFF /* AucionProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF3962E1DF1190B00D38BFF /* AucionProjectViewController.m */; };
 		DFFAC6B21DE7D9DF00A0F4A3 /* BeautyServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B11DE7D9DF00A0F4A3 /* BeautyServerInteraction.m */; };
 		DFFAC6B61DE7DD0600A0F4A3 /* AuctionProjectInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B51DE7DD0600A0F4A3 /* AuctionProjectInfo.m */; };
 		DFFAC6B91DE7EEE000A0F4A3 /* ExpertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFFAC6B81DE7EEE000A0F4A3 /* ExpertInfo.m */; };
@@ -458,6 +459,8 @@
 		DFF068311DE563F800E1C244 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
 		DFF068321DE563F800E1C244 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
 		DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		DFF3962D1DF1190B00D38BFF /* AucionProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AucionProjectViewController.h; sourceTree = "<group>"; };
+		DFF3962E1DF1190B00D38BFF /* AucionProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AucionProjectViewController.m; sourceTree = "<group>"; };
 		DFFAC6B01DE7D9DF00A0F4A3 /* BeautyServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeautyServerInteraction.h; sourceTree = "<group>"; };
 		DFFAC6B11DE7D9DF00A0F4A3 /* BeautyServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautyServerInteraction.m; sourceTree = "<group>"; };
 		DFFAC6B41DE7DD0600A0F4A3 /* AuctionProjectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuctionProjectInfo.h; sourceTree = "<group>"; };
@@ -1527,6 +1530,8 @@
 		DFF7A9981DF10B29003B559F /* 拍卖项目详情 */ = {
 			isa = PBXGroup;
 			children = (
+				DFF3962D1DF1190B00D38BFF /* AucionProjectViewController.h */,
+				DFF3962E1DF1190B00D38BFF /* AucionProjectViewController.m */,
 			);
 			name = "拍卖项目详情";
 			sourceTree = "<group>";
@@ -1770,6 +1775,7 @@
 				9022EC6E1D5C1D6200C826B5 /* MineHeaderView.m in Sources */,
 				DF96C81D1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.m in Sources */,
 				DFBD197D1DEEAD0500A94988 /* AuctionProjectTableViewCell.m in Sources */,
+				DFF3962F1DF1190B00D38BFF /* AucionProjectViewController.m in Sources */,
 				183C312E1DDDB11200C1BFA5 /* FindSpecialInfo.m in Sources */,
 				DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */,
 				185AF3A01DE93A7100CB193E /* GetCaseListInfo.m in Sources */,

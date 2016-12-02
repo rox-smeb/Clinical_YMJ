@@ -12,6 +12,7 @@
 #import "HospitalTableViewCell.h"
 #import "ExpertTableViewCell.h"
 #import "AuctionProjectTableViewCell.h"
+#import "AucionProjectViewController.h"
 
 #define ITEM_TAG_AUCTIONPROJECT                 (0)
 #define ITEM_TAG_EXPERT                         (1)
@@ -391,7 +392,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    // 项目竞拍列表
+    if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
+    {
+        AucionProjectViewController *apVC = [AucionProjectViewController viewController];
+        [self.navigationController pushViewController:apVC animated:YES];
+    }
     
+    // 医生列表
+    if (self.itemTag == ITEM_TAG_EXPERT)
+    {
+    }
+    
+    // 机构列表
+    if (self.itemTag == ITEM_TAG_AGENCY)
+    {
+    }
 }
 
 #pragma mark - UITableViewDataSource

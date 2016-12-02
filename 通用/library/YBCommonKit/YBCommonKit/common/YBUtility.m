@@ -139,7 +139,7 @@
         
         if (AboveIOS7)
         {
-            [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+            [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
             [[UINavigationBar appearance] setBackIndicatorImage:backImage];
             [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImageSel];
         }
