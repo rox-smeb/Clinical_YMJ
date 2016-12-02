@@ -683,6 +683,7 @@
 		90AD75641D615BC900CB7661 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DFF7A9981DF10B29003B559F /* 拍卖项目详情 */,
 				DF35FF6C1DE682F80013E46D /* 我要求美 */,
 				DF8F84F91D795CCE006D7EB5 /* 城市列表选择 */,
 			);
@@ -1521,6 +1522,13 @@
 				DFF068331DE563F800E1C244 /* VideoTableViewCell.xib */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		DFF7A9981DF10B29003B559F /* 拍卖项目详情 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "拍卖项目详情";
 			sourceTree = "<group>";
 		};
 		DFFAC6C11DE835E700A0F4A3 /* 医生cell */ = {
