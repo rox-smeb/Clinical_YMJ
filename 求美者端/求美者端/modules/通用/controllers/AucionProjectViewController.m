@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UILabel *fPrice;
+@property (weak, nonatomic) IBOutlet UILabel *date;
 
 @property (strong, nonatomic) NSArray* bannerInfoArray;
 @property (strong, nonatomic) NSMutableArray* bannerImageURLArray;
@@ -43,6 +44,7 @@
     self.name.text = self.auctionInfo.name;
     self.price.text = self.auctionInfo.price;
     self.fPrice.text = self.auctionInfo.fPrice;
+    self.date.text = [self timeFormatted:86400];
     
     [self.topImage.layer setCornerRadius:8.0f];
     self.topImage.datasource = self;
@@ -53,6 +55,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark -- 配置剩余竞拍时间
+- (NSString *)timeFormatted:(int)totalSeconds
+{
+    
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60) % 60;
+    int hours = (totalSeconds / 3600) % 24;
+    int days = totalSeconds / (3600*24);
+    
+    return [NSString stringWithFormat:@"%02d:%02d:%02d:%02d", days,hours, minutes, seconds];
+} 
 
 #pragma mark -- 配置轮播图片
 - (void)loadData:(NSArray*)bannerInfo

@@ -328,6 +328,7 @@
                     <navigationItem key="navigationItem" title="拍卖项目详情" id="Uw8-eI-JtD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="date" destination="Pmc-bq-VCS" id="QcT-Y5-7o5"/>
                         <outlet property="fPrice" destination="mmT-qa-z2I" id="Ue0-aC-hQy"/>
                         <outlet property="name" destination="cgM-GG-oWS" id="ep5-HP-aaQ"/>
                         <outlet property="price" destination="f96-am-r3k" id="j2X-a1-MGE"/>
