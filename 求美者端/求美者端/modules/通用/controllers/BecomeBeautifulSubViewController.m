@@ -399,8 +399,13 @@
     // 项目竞拍列表
     if (self.itemTag == ITEM_TAG_AUCTIONPROJECT)
     {
-        AucionProjectViewController *apVC = [AucionProjectViewController viewController];
-        [self.navigationController pushViewController:apVC animated:YES];
+        if (indexPath.row < [self.auctionProData count])
+        {
+            AuctionProjectInfo *info = [self.auctionProData objectAtIndex:indexPath.row];
+            AucionProjectViewController *apVC = [AucionProjectViewController viewController];
+            apVC.auctionInfo = info;
+            [self.navigationController pushViewController:apVC animated:YES];
+        }
     }
     
     // 医生列表

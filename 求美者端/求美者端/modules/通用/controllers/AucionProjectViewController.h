@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AuctionProjectInfo.h"
 
 @interface AucionProjectViewController : UIViewController
+
+@property (strong, nonatomic) AuctionProjectInfo *auctionInfo;
 
 + (instancetype)viewController;
 

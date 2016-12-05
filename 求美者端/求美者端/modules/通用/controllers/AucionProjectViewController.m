@@ -9,12 +9,17 @@
 #import "AucionProjectViewController.h"
 #import "YBCommonKit/KDCycleBannerView.h"
 
-#define DEFAULT_SCOLL_IMAGE                   ([UIImage imageNamed:@"sidian"]);
+#define DEFAULT_SCOLL_IMAGE                   ([UIImage imageNamed:@"topbg"]);
 
 @interface AucionProjectViewController ()<KDCycleBannerViewDataSource,KDCycleBannerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet KDCycleBannerView *topImage;
-@property (nonatomic, strong) NSArray *bannerImageArray;                // 轮播图片
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *price;
+@property (weak, nonatomic) IBOutlet UILabel *fPrice;
+
+@property (strong, nonatomic) NSArray* bannerInfoArray;
+@property (strong, nonatomic) NSMutableArray* bannerImageURLArray;
 
 @end
 
@@ -28,17 +33,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self setup];
 }
 
 - (void)setup
 {
-    UIImage *image0 = [UIImage imageNamed:@"topbg"];
-    UIImage *image1 = [UIImage imageNamed:@"sidian"];
-    UIImage *image2 = [UIImage imageNamed:@"kobe"];
-    
-    self.bannerImageArray = @[image0, image1, image2];
+    [self loadData:self.auctionInfo.urlList];
+    self.name.text = self.auctionInfo.name;
+    self.price.text = self.auctionInfo.price;
+    self.fPrice.text = self.auctionInfo.fPrice;
     
     [self.topImage.layer setCornerRadius:8.0f];
     self.topImage.datasource = self;
@@ -49,6 +53,49 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+#pragma mark -- 配置轮播图片
+- (void)loadData:(NSArray*)bannerInfo
+{
+    self.bannerInfoArray = bannerInfo;
+    
+    if (self.bannerImageURLArray == nil)
+    {
+        self.bannerImageURLArray = [NSMutableArray array];
+    }
+    else
+    {
+        [self.bannerImageURLArray removeAllObjects];
+    }
+    
+    // 构建Banner显示的图片列表
+    for (AuctionProUrlInfo* info in self.bannerInfoArray)
+    {
+        if ([info isKindOfClass:[AuctionProUrlInfo class]])
+        {
+            if (info.url != nil)
+            {
+                [self.bannerImageURLArray addObject:info.url];
+            }
+        }
+    }
+    
+    // 设置是否轮播
+    if (self.bannerImageURLArray.count > 1)
+    {
+        [self.topImage setContinuous:YES];
+    }
+    else
+    {
+        [self.topImage setContinuous:NO];
+    }
+    
+    // 重新加载数据
+    [self.topImage reloadDataWithCompleteBlock:^{
+        
+    }];
+}
+
 
 #pragma mark -- 查看医生详情响应事件
 - (IBAction)doctorDetailsClicked:(UIButton *)sender {
@@ -63,7 +110,7 @@
 
 - (NSArray *)numberOfKDCycleBannerView:(KDCycleBannerView *)bannerView
 {
-    return self.bannerImageArray;
+    return self.bannerImageURLArray;
 }
 
 - (UIImage *)placeHolderImageOfBannerView:(KDCycleBannerView *)bannerView atIndex:(NSUInteger)index
