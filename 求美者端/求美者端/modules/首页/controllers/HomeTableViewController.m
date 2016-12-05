@@ -121,6 +121,7 @@
     //self.tableHeader.delegate = self;
     self.homeTableView.tableHeaderView = self.tableHeader;
     self.homeTableView.tableHeaderView.height = [HomeTableViewHeaderView height];
+    
     UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 0, 50, 0);
     self.homeTableView.contentInset = edgeInsets;
 

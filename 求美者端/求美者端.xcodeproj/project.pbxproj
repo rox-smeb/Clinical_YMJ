@@ -142,10 +142,13 @@
 		DF35FF721DE683E60013E46D /* BecomeBeautifulSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF35FF711DE683E60013E46D /* BecomeBeautifulSubViewController.m */; };
 		DF35FF771DE694EC0013E46D /* HospitalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF35FF751DE694EC0013E46D /* HospitalTableViewCell.m */; };
 		DF35FF781DE694EC0013E46D /* HospitalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF35FF761DE694EC0013E46D /* HospitalTableViewCell.xib */; };
+		DF3D231D1DF57948000DC9D6 /* DoctorDetailsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D231C1DF57948000DC9D6 /* DoctorDetailsHeaderView.m */; };
+		DF3D231F1DF57969000DC9D6 /* DoctorDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3D231E1DF57969000DC9D6 /* DoctorDetailsHeaderView.xib */; };
 		DF4077631DD2B5D000436FDF /* FunctionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4077611DD2B5D000436FDF /* FunctionTableViewCell.m */; };
 		DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4077621DD2B5D000436FDF /* FunctionTableViewCell.xib */; };
 		DF5C36FA1DE5703D00082629 /* VideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C36F91DE5703D00082629 /* VideoInfo.m */; };
 		DF5C37021DE5777800082629 /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C37011DE5777800082629 /* PlayVideoViewController.m */; };
+		DF5EF89A1DF5922800203F5D /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5EF8991DF5922800203F5D /* CWStarRateView.m */; };
 		DF872C8F1DF0106000CBDB23 /* WSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF872C8E1DF0106000CBDB23 /* WSMovieController.m */; };
 		DF872C931DF0108300CBDB23 /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF872C921DF0108300CBDB23 /* media.mp4 */; };
 		DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */; };
@@ -399,6 +402,9 @@
 		DF35FF741DE694EC0013E46D /* HospitalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalTableViewCell.h; sourceTree = "<group>"; };
 		DF35FF751DE694EC0013E46D /* HospitalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalTableViewCell.m; sourceTree = "<group>"; };
 		DF35FF761DE694EC0013E46D /* HospitalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HospitalTableViewCell.xib; sourceTree = "<group>"; };
+		DF3D231B1DF57948000DC9D6 /* DoctorDetailsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctorDetailsHeaderView.h; sourceTree = "<group>"; };
+		DF3D231C1DF57948000DC9D6 /* DoctorDetailsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctorDetailsHeaderView.m; sourceTree = "<group>"; };
+		DF3D231E1DF57969000DC9D6 /* DoctorDetailsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoctorDetailsHeaderView.xib; sourceTree = "<group>"; };
 		DF4077601DD2B5D000436FDF /* FunctionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionTableViewCell.h; sourceTree = "<group>"; };
 		DF4077611DD2B5D000436FDF /* FunctionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionTableViewCell.m; sourceTree = "<group>"; };
 		DF4077621DD2B5D000436FDF /* FunctionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunctionTableViewCell.xib; sourceTree = "<group>"; };
@@ -406,6 +412,8 @@
 		DF5C36F91DE5703D00082629 /* VideoInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoInfo.m; sourceTree = "<group>"; };
 		DF5C37001DE5777800082629 /* PlayVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayVideoViewController.h; sourceTree = "<group>"; };
 		DF5C37011DE5777800082629 /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
+		DF5EF8981DF5922800203F5D /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
+		DF5EF8991DF5922800203F5D /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
 		DF872C8D1DF0106000CBDB23 /* WSMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMovieController.h; sourceTree = "<group>"; };
 		DF872C8E1DF0106000CBDB23 /* WSMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMovieController.m; sourceTree = "<group>"; };
 		DF872C921DF0108300CBDB23 /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
@@ -723,6 +731,7 @@
 		90AD75671D615BC900CB7661 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DF3D23181DF578C8000DC9D6 /* 医生详情 */,
 				DFBD19781DEEACD700A94988 /* 项目拍卖cell */,
 				DFFAC6C11DE835E700A0F4A3 /* 医生cell */,
 				DF35FF731DE694760013E46D /* 机构cell */,
@@ -1029,6 +1038,7 @@
 		90E766BC1D599268008E6C82 /* 3thpart */ = {
 			isa = PBXGroup;
 			children = (
+				DF5EF8961DF5921C00203F5D /* 评价星星 */,
 				DF872C911DF0106C00CBDB23 /* 启动视频 */,
 			);
 			path = 3thpart;
@@ -1359,6 +1369,24 @@
 			name = "机构cell";
 			sourceTree = "<group>";
 		};
+		DF3D23181DF578C8000DC9D6 /* 医生详情 */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D231A1DF578E2000DC9D6 /* tablviewHeader */,
+			);
+			name = "医生详情";
+			sourceTree = "<group>";
+		};
+		DF3D231A1DF578E2000DC9D6 /* tablviewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D231B1DF57948000DC9D6 /* DoctorDetailsHeaderView.h */,
+				DF3D231C1DF57948000DC9D6 /* DoctorDetailsHeaderView.m */,
+				DF3D231E1DF57969000DC9D6 /* DoctorDetailsHeaderView.xib */,
+			);
+			name = tablviewHeader;
+			sourceTree = "<group>";
+		};
 		DF4077661DD2B5F200436FDF /* 首页功能cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,6 +1404,15 @@
 				DF5C37011DE5777800082629 /* PlayVideoViewController.m */,
 			);
 			name = "视频播放";
+			sourceTree = "<group>";
+		};
+		DF5EF8961DF5921C00203F5D /* 评价星星 */ = {
+			isa = PBXGroup;
+			children = (
+				DF5EF8981DF5922800203F5D /* CWStarRateView.h */,
+				DF5EF8991DF5922800203F5D /* CWStarRateView.m */,
+			);
+			name = "评价星星";
 			sourceTree = "<group>";
 		};
 		DF872C911DF0106C00CBDB23 /* 启动视频 */ = {
@@ -1658,6 +1695,7 @@
 				DF96C8201D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib in Resources */,
 				DF8F85051D7963E3006D7EB5 /* CommonSelectTableSectionHeader.xib in Resources */,
 				90E76B591D59B831008E6C82 /* AlipaySDK.bundle in Resources */,
+				DF3D231F1DF57969000DC9D6 /* DoctorDetailsHeaderView.xib in Resources */,
 				909BEDD71D598095007D7A7E /* LaunchScreen.storyboard in Resources */,
 				90E769F21D59B816008E6C82 /* Assets.xcassets in Resources */,
 				DF4077641DD2B5D000436FDF /* FunctionTableViewCell.xib in Resources */,
@@ -1744,6 +1782,7 @@
 				DF1C94D61D7687B6003D5114 /* HomeTableViewHeaderView.m in Sources */,
 				DF91744E1D792E1900F32CCF /* DoctorServerInteraction.m in Sources */,
 				18C534A61DE6D8F000A20875 /* FindClassifyInfo.m in Sources */,
+				DF5EF89A1DF5922800203F5D /* CWStarRateView.m in Sources */,
 				DF35FF6F1DE683BD0013E46D /* BecomeBeautifulViewController.m in Sources */,
 				905383641D65C04B007D722E /* ConsultationTableViewController.m in Sources */,
 				DF4077631DD2B5D000436FDF /* FunctionTableViewCell.m in Sources */,
@@ -1763,6 +1802,7 @@
 				90E76B5F1D59B831008E6C82 /* ApiXml.mm in Sources */,
 				90AD75711D6163F300CB7661 /* LoginServerInteraction.m in Sources */,
 				90AD757C1D61A6DB00CB7661 /* MirrorServerInteraction.m in Sources */,
+				DF3D231D1DF57948000DC9D6 /* DoctorDetailsHeaderView.m in Sources */,
 				90E769F71D59B816008E6C82 /* WebViewController.m in Sources */,
 				90E76BA31D59C95A008E6C82 /* MineTableViewController.m in Sources */,
 				DF96C81F1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m in Sources */,

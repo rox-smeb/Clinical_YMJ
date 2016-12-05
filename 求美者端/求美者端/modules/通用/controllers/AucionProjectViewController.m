@@ -8,6 +8,8 @@
 
 #import "AucionProjectViewController.h"
 #import "YBCommonKit/KDCycleBannerView.h"
+#import "VerDoctorWebTableViewController.h"
+#import "VerDoctorWebViewController.h"
 
 #define DEFAULT_SCOLL_IMAGE                   ([UIImage imageNamed:@"topbg"]);
 
@@ -114,6 +116,8 @@
 #pragma mark -- 查看医生详情响应事件
 - (IBAction)doctorDetailsClicked:(UIButton *)sender {
     NSLog(@"查看医生详情");
+    VerDoctorWebViewController *vc = [VerDoctorWebViewController viewController];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -- KDCycleBannerViewDataSource

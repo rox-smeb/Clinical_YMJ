@@ -9,12 +9,14 @@
 #import "VerDoctorWebViewController.h"
 #import "VerDoctorFooterView.h"
 #import "VerDoctorWebTableViewCell.h"
+#import "DoctorDetailsHeaderView.h"
 
 @interface VerDoctorWebViewController ()<UITableViewDataSource,
                                          UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *webTabelview;
 
+@property (strong, nonatomic) DoctorDetailsHeaderView *tableHeader;
 
 @end
 
@@ -37,7 +39,12 @@
     [self.webTabelview solveCrashWithIOS7];                // 静态cell的tableview 在ios7上用约束 会闪退
     [self.webTabelview removeSeperatorBlank];              // 删除 前面的 空白
     [self.webTabelview removeRedundanceSeperator];         // 删除 多余的线
-        
+    
+    self.tableHeader = [DoctorDetailsHeaderView create];
+    //self.tableHeader.delegate = self;
+    self.webTabelview.tableHeaderView = self.tableHeader;
+    self.webTabelview.tableHeaderView.height = [DoctorDetailsHeaderView height];
+
     [self.webTabelview registerNibName:[VerDoctorWebTableViewCell className] cellID:[VerDoctorWebTableViewCell className]];
     
 }
@@ -76,13 +83,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 0;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VerDoctorWebTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[VerDoctorWebTableViewCell className] forIndexPath:indexPath];
-    [cell loadURL:self.url];
+    //[cell loadURL:self.url];
     //cell.delegate = self;
     [cell solveCrashWithIOS7];
     [cell removeSeperatorBlank];
