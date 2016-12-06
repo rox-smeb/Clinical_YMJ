@@ -129,7 +129,7 @@
 #pragma mark -- 查看医生详情响应事件
 - (IBAction)doctorDetailsClicked:(UIButton *)sender {
     NSLog(@"查看医生详情");
-    VerDoctorWebViewController *vc = [VerDoctorWebViewController viewController];
+    VerDoctorWebViewController *vc = [VerDoctorWebViewController viewControllerWithDid:self.auctionInfo.dId];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

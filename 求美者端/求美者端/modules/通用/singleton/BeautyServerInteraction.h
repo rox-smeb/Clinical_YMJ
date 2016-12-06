@@ -7,9 +7,11 @@
 //
 
 #import <YBCommonKit/YBCommonKit.h>
+#import "UserInfo.h"
 #import "AuctionProjectInfo.h"
 #import "ExpertInfo.h"
 #import "AgencyInfo.h"
+#import "GetDoctorDetailsInfo.h"
 
 @interface BeautyServerInteraction : YBServerInteraction
 
@@ -85,6 +87,22 @@
                    provinceId:(NSString*)provinceId
                       keyWord:(NSString*)keyWord
                 responseBlock:(YBResponseBlock)responseBlock;
+
+
+#pragma mark - 获取医生详情
+
+/**
+ *  获取机构列表
+ *
+ *  @param dId                  分页计数编号
+ *  @param uid                  是否取最新数据
+ *  @param ukey                 分类编号
+ *  @param responseBlock        成功回调
+ */
+- (void)getDoctorDetailsWithdId:(NSString*)dId
+                            uid:(NSString*)uid
+                           ukey:(NSString*)ukey
+                  responseBlock:(YBResponseBlock)responseBlock;
 
 
 @end

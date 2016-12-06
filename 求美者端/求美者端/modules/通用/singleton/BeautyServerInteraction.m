@@ -115,6 +115,25 @@ static BeautyServerInteraction *SINGLETON = nil;
       responseBlock:responseBlock];
 }
 
+#pragma mark - 获取医生详情
+
+- (void)getDoctorDetailsWithdId:(NSString*)dId
+                            uid:(NSString*)uid
+                           ukey:(NSString*)ukey
+                  responseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    [param addParam:dId forKey:@"dId"];
+    [param addParam:uid forKey:@"uid"];
+    [param addParam:ukey forKey:@"ukey"];
+    
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"getDoctorDetails"]
+             method:GET
+       responseType:RESPONSE_INFO_DATA
+          itemClass:[GetDoctorDetailsInfo class]
+             params:param
+      responseBlock:responseBlock];
+}
 
 
 @end

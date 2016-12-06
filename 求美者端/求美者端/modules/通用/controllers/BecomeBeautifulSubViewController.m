@@ -13,6 +13,7 @@
 #import "ExpertTableViewCell.h"
 #import "AuctionProjectTableViewCell.h"
 #import "AucionProjectViewController.h"
+#import "VerDoctorWebViewController.h"
 
 #define ITEM_TAG_AUCTIONPROJECT                 (0)
 #define ITEM_TAG_EXPERT                         (1)
@@ -411,6 +412,12 @@
     // 医生列表
     if (self.itemTag == ITEM_TAG_EXPERT)
     {
+        if (indexPath.row < [self.expertData count])
+        {
+            ExpertInfo *info = [self.auctionProData objectAtIndex:indexPath.row];
+            VerDoctorWebViewController *verVC = [VerDoctorWebViewController viewControllerWithDid:info.eId];
+            [self.navigationController pushViewController:verVC animated:YES];
+        }
     }
     
     // 机构列表

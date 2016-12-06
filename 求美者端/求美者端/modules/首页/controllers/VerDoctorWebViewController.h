@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *url;
 
 + (instancetype)viewController;
++ (instancetype)viewControllerWithDid:(NSString *)did;
 
 @end

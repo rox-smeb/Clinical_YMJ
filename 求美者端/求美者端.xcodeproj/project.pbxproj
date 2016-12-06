@@ -167,6 +167,7 @@
 		DF96C81E1D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF96C8171D7569F8001E5C12 /* GarageAbilityCollectionSectionHeader.xib */; };
 		DF96C81F1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF96C8191D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m */; };
 		DF96C8201D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF96C81A1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib */; };
+		DFB9DBE01DF699EE00D47914 /* GetDoctorDetailsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB9DBDF1DF699EE00D47914 /* GetDoctorDetailsInfo.m */; };
 		DFBD197D1DEEAD0500A94988 /* AuctionProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBD197B1DEEAD0500A94988 /* AuctionProjectTableViewCell.m */; };
 		DFBD197E1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBD197C1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib */; };
 		DFE194581D7D551E00791F8D /* VerDoctorWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE194571D7D551E00791F8D /* VerDoctorWebTableViewController.m */; };
@@ -445,6 +446,8 @@
 		DF96C8181D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GarageAbilityItemCollectionViewCell.h; sourceTree = "<group>"; };
 		DF96C8191D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GarageAbilityItemCollectionViewCell.m; sourceTree = "<group>"; };
 		DF96C81A1D7569F8001E5C12 /* GarageAbilityItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GarageAbilityItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		DFB9DBDE1DF699EE00D47914 /* GetDoctorDetailsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDoctorDetailsInfo.h; sourceTree = "<group>"; };
+		DFB9DBDF1DF699EE00D47914 /* GetDoctorDetailsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDoctorDetailsInfo.m; sourceTree = "<group>"; };
 		DFBD197A1DEEAD0500A94988 /* AuctionProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuctionProjectTableViewCell.h; sourceTree = "<group>"; };
 		DFBD197B1DEEAD0500A94988 /* AuctionProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuctionProjectTableViewCell.m; sourceTree = "<group>"; };
 		DFBD197C1DEEAD0500A94988 /* AuctionProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuctionProjectTableViewCell.xib; sourceTree = "<group>"; };
@@ -713,6 +716,8 @@
 				DFFAC6B81DE7EEE000A0F4A3 /* ExpertInfo.m */,
 				DFFAC6BA1DE7F88B00A0F4A3 /* AgencyInfo.h */,
 				DFFAC6BB1DE7F88B00A0F4A3 /* AgencyInfo.m */,
+				DFB9DBDE1DF699EE00D47914 /* GetDoctorDetailsInfo.h */,
+				DFB9DBDF1DF699EE00D47914 /* GetDoctorDetailsInfo.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -1328,8 +1333,8 @@
 		DF1C94CD1D768336003D5114 /* collectionCell */ = {
 			isa = PBXGroup;
 			children = (
-				185AF3971DE92B8600CB193E /* 案例展示 */,
 				18C534AE1DE7C43200A20875 /* 直通韩国 */,
+				185AF3971DE92B8600CB193E /* 案例展示 */,
 				183C31261DDD9D5800C1BFA5 /* 专家会诊cell */,
 				DFE1EE461DD302A700227EB8 /* 中国好整形 */,
 				DF4077661DD2B5F200436FDF /* 首页功能cell */,
@@ -1772,6 +1777,7 @@
 				18C534B91DE85CFC00A20875 /* FailRepairViewController.m in Sources */,
 				900B00A61D5AE837003810C5 /* TabBarCenterView.m in Sources */,
 				DF13AABC1D7E63BB0062D35D /* VerifyFrameWorkTableViewController.m in Sources */,
+				DFB9DBE01DF699EE00D47914 /* GetDoctorDetailsInfo.m in Sources */,
 				9022EC801D5C6C4E00C826B5 /* UserInfo.m in Sources */,
 				90CDCBB21D5D694800FF2B6D /* Quackwatch110TableViewController.m in Sources */,
 				90AD75801D61B6FD00CB7661 /* GuaranteeOrderTableViewController.m in Sources */,
