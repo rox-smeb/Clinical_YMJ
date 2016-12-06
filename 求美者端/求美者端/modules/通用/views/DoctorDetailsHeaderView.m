@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) CWStarRateView *starRateView;
 @property (weak, nonatomic) IBOutlet UIView *starView;
+@property (weak, nonatomic) IBOutlet UILabel *hospital;
 
 @end
 
@@ -35,12 +36,22 @@
 {
     [super awakeFromNib];
     
+    [self setup];
+}
+
+- (void)setup
+{
+    // 评价星级展示
     self.starRateView = [[CWStarRateView alloc] initWithFrame:CGRectMake(0, 0, 100, 20) numberOfStars:5];
     self.starRateView.scorePercent = 0.6;
     self.starRateView.allowIncompleteStar = YES;
     self.starRateView.hasAnimation = YES;
     [self.starView addSubview:self.starRateView];
 
+    // 医院名称
+    _hospital.text = @"这特么是什么鬼";
+    [_hospital.layer setCornerRadius:17.5f];
+    [_hospital.layer setMasksToBounds:YES];
 }
 
 @end
