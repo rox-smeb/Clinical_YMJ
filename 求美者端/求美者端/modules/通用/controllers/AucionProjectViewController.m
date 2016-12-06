@@ -23,6 +23,8 @@
 
 @property (strong, nonatomic) NSArray* bannerInfoArray;
 @property (strong, nonatomic) NSMutableArray* bannerImageURLArray;
+@property (strong, nonatomic) NSTimer *countDownTimer;
+@property (assign, nonatomic) int secondsCountDown;
 
 @end
 
@@ -46,13 +48,24 @@
     self.name.text = self.auctionInfo.name;
     self.price.text = self.auctionInfo.price;
     self.fPrice.text = self.auctionInfo.fPrice;
-    self.date.text = [self timeFormatted:86400];
     
     [self.topImage.layer setCornerRadius:8.0f];
     self.topImage.datasource = self;
     self.topImage.delegate = self;
     self.topImage.autoPlayTimeInterval = 5;
+    self.date.text = [self timeFormatted:86400];
+    _secondsCountDown = 86400;//60秒倒计时
+    _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
 
+}
+
+-(void)timeFireMethod{
+    _secondsCountDown--;
+    self.date.text = [self timeFormatted:_secondsCountDown];
+    if(_secondsCountDown==0){
+        [_countDownTimer invalidate];
+    }
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
