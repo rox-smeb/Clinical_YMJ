@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GetDoctorDetailsInfo.h"
 
 @interface CaseTableViewCell : UITableViewCell
+
++ (CGFloat)height;
+
+- (void)setupWithCaseInfo:(GetCaseListListInfo*)info;
 
 @end

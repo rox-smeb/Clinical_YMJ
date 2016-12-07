@@ -149,8 +149,11 @@
 		DF5C36FA1DE5703D00082629 /* VideoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C36F91DE5703D00082629 /* VideoInfo.m */; };
 		DF5C37021DE5777800082629 /* PlayVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5C37011DE5777800082629 /* PlayVideoViewController.m */; };
 		DF5EF89A1DF5922800203F5D /* CWStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5EF8991DF5922800203F5D /* CWStarRateView.m */; };
+		DF7F47441DF8144C00F66482 /* CollectionDoctorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7F47431DF8144C00F66482 /* CollectionDoctorTableViewController.m */; };
 		DF872C8F1DF0106000CBDB23 /* WSMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF872C8E1DF0106000CBDB23 /* WSMovieController.m */; };
 		DF872C931DF0108300CBDB23 /* media.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DF872C921DF0108300CBDB23 /* media.mp4 */; };
+		DF8983131DF7A9BB00980134 /* ProjectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8983111DF7A9BB00980134 /* ProjectTableViewCell.m */; };
+		DF8983141DF7A9BB00980134 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF8983121DF7A9BB00980134 /* ProjectTableViewCell.xib */; };
 		DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */; };
 		DF8F84F41D79527B006D7EB5 /* CommonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84F31D79527B006D7EB5 /* CommonInfo.m */; };
 		DF8F84FC1D795CD9006D7EB5 /* SecondLevelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF8F84FB1D795CD9006D7EB5 /* SecondLevelListViewController.m */; };
@@ -415,9 +418,14 @@
 		DF5C37011DE5777800082629 /* PlayVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayVideoViewController.m; sourceTree = "<group>"; };
 		DF5EF8981DF5922800203F5D /* CWStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStarRateView.h; sourceTree = "<group>"; };
 		DF5EF8991DF5922800203F5D /* CWStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStarRateView.m; sourceTree = "<group>"; };
+		DF7F47421DF8144C00F66482 /* CollectionDoctorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionDoctorTableViewController.h; sourceTree = "<group>"; };
+		DF7F47431DF8144C00F66482 /* CollectionDoctorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionDoctorTableViewController.m; sourceTree = "<group>"; };
 		DF872C8D1DF0106000CBDB23 /* WSMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSMovieController.h; sourceTree = "<group>"; };
 		DF872C8E1DF0106000CBDB23 /* WSMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSMovieController.m; sourceTree = "<group>"; };
 		DF872C921DF0108300CBDB23 /* media.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = media.mp4; sourceTree = "<group>"; };
+		DF8983101DF7A9BB00980134 /* ProjectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectTableViewCell.h; sourceTree = "<group>"; };
+		DF8983111DF7A9BB00980134 /* ProjectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectTableViewCell.m; sourceTree = "<group>"; };
+		DF8983121DF7A9BB00980134 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		DF8F84EE1D794F8B006D7EB5 /* CommonServerInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonServerInteraction.h; sourceTree = "<group>"; };
 		DF8F84EF1D794F8B006D7EB5 /* CommonServerInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonServerInteraction.m; sourceTree = "<group>"; };
 		DF8F84F21D79527B006D7EB5 /* CommonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonInfo.h; path = "../../首页/models/CommonInfo.h"; sourceTree = "<group>"; };
@@ -541,6 +549,7 @@
 				185AF39B1DE92BEA00CB193E /* CaseTableViewCell.xib */,
 			);
 			name = "案例展示";
+			path = "../../首页/views/修理厂详情cell";
 			sourceTree = "<group>";
 		};
 		185AF3A41DEC16E500CB193E /* 我的病历 */ = {
@@ -933,6 +942,7 @@
 		90E766A71D599207008E6C82 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF7F47401DF8142900F66482 /* 收藏医生列表 */,
 				90E76BA11D59C95A008E6C82 /* MineTableViewController.h */,
 				90E76BA21D59C95A008E6C82 /* MineTableViewController.m */,
 				185AF3B01DEC22E800CB193E /* MyMedicalRecordListTableViewController.h */,
@@ -1334,7 +1344,6 @@
 			isa = PBXGroup;
 			children = (
 				18C534AE1DE7C43200A20875 /* 直通韩国 */,
-				185AF3971DE92B8600CB193E /* 案例展示 */,
 				183C31261DDD9D5800C1BFA5 /* 专家会诊cell */,
 				DFE1EE461DD302A700227EB8 /* 中国好整形 */,
 				DF4077661DD2B5F200436FDF /* 首页功能cell */,
@@ -1377,6 +1386,8 @@
 		DF3D23181DF578C8000DC9D6 /* 医生详情 */ = {
 			isa = PBXGroup;
 			children = (
+				DF89830F1DF7A65D00980134 /* 医生项目 */,
+				185AF3971DE92B8600CB193E /* 案例展示 */,
 				DF3D231A1DF578E2000DC9D6 /* tablviewHeader */,
 			);
 			name = "医生详情";
@@ -1420,6 +1431,15 @@
 			name = "评价星星";
 			sourceTree = "<group>";
 		};
+		DF7F47401DF8142900F66482 /* 收藏医生列表 */ = {
+			isa = PBXGroup;
+			children = (
+				DF7F47421DF8144C00F66482 /* CollectionDoctorTableViewController.h */,
+				DF7F47431DF8144C00F66482 /* CollectionDoctorTableViewController.m */,
+			);
+			name = "收藏医生列表";
+			sourceTree = "<group>";
+		};
 		DF872C911DF0106C00CBDB23 /* 启动视频 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1428,6 +1448,16 @@
 				DF872C8E1DF0106000CBDB23 /* WSMovieController.m */,
 			);
 			name = "启动视频";
+			sourceTree = "<group>";
+		};
+		DF89830F1DF7A65D00980134 /* 医生项目 */ = {
+			isa = PBXGroup;
+			children = (
+				DF8983101DF7A9BB00980134 /* ProjectTableViewCell.h */,
+				DF8983111DF7A9BB00980134 /* ProjectTableViewCell.m */,
+				DF8983121DF7A9BB00980134 /* ProjectTableViewCell.xib */,
+			);
+			name = "医生项目";
 			sourceTree = "<group>";
 		};
 		DF8F84F91D795CCE006D7EB5 /* 城市列表选择 */ = {
@@ -1689,6 +1719,7 @@
 				90E769FE1D59B816008E6C82 /* UIPopoverDatePicker.xib in Resources */,
 				DFF068351DE563F800E1C244 /* VideoTableViewCell.xib in Resources */,
 				90E769F41D59B816008E6C82 /* Common.storyboard in Resources */,
+				DF8983141DF7A9BB00980134 /* ProjectTableViewCell.xib in Resources */,
 				90E76B2E1D59B816008E6C82 /* FontAwesome.otf in Resources */,
 				90E766B71D599207008E6C82 /* Main.storyboard in Resources */,
 				18C534B31DE7C53500A20875 /* KoreaDoctorTableViewCell.xib in Resources */,
@@ -1816,6 +1847,7 @@
 				18C534A01DE68E3D00A20875 /* ProvincialInfo.m in Sources */,
 				90AD75881D62A2BF00CB7661 /* DisputeResolveTableViewController.m in Sources */,
 				DFE194661D7D618C00791F8D /* VerDoctorWebViewController.m in Sources */,
+				DF8983131DF7A9BB00980134 /* ProjectTableViewCell.m in Sources */,
 				185AF3AC1DEC1C9300CB193E /* MyMedicalRecordListInfo.m in Sources */,
 				DF8F84F01D794F8B006D7EB5 /* CommonServerInteraction.m in Sources */,
 				9022EC6E1D5C1D6200C826B5 /* MineHeaderView.m in Sources */,
@@ -1831,6 +1863,7 @@
 				DFFAC6BC1DE7F88B00A0F4A3 /* AgencyInfo.m in Sources */,
 				90AD75741D61701200CB7661 /* HomePormptInfo.m in Sources */,
 				182EFEFD1DDC2F730061A47E /* DisputeResolveViewController.m in Sources */,
+				DF7F47441DF8144C00F66482 /* CollectionDoctorTableViewController.m in Sources */,
 				9022EC731D5C511B00C826B5 /* ConsultationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,12 @@
 
 #import <YBCommonKit/YBCommonKit.h>
 #import "MyMedicalRecordListInfo.h"
+
 @interface MyServerInteraction : YBServerInteraction
+
+
 + (MyServerInteraction*)sharedInstance;
+
 #pragma mark - 我的病历列表
 
 /**

@@ -25,22 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/VerifyDoctorTableViewController.m"
-            timestampString = "501664469.322607"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "-provinceClicked:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x901a;&#x7528;/controllers/BecomeBeautifulViewController.m"
             timestampString = "502266319.591932"
             startingColumnNumber = "9223372036854775807"
@@ -64,22 +48,6 @@
             startingLineNumber = "252"
             endingLineNumber = "252"
             landmarkName = "-configPlayVideo"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x6c42;&#x7f8e;&#x8005;&#x7aef;/&#x6c42;&#x7f8e;&#x8005;&#x7aef;/modules/&#x9996;&#x9875;/controllers/VerDoctorWebViewController.m"
-            timestampString = "502716910.259123"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-loadData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

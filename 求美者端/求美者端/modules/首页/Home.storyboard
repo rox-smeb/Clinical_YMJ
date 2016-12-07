@@ -1104,7 +1104,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EF5-rK-FjG"/>
                                     <constraint firstItem="QBM-Le-SV5" firstAttribute="top" secondItem="7eJ-l7-zVK" secondAttribute="top" id="OqC-7a-Gvh"/>

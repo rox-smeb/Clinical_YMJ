@@ -52,7 +52,7 @@
 
 + (CGFloat)heightWihtInfo:(ExpertInfo*)info
 {
-    CGFloat height = 74.0f + info.recommendList.count * PROBLEM_LEFT;
+    CGFloat height = 90.0f + info.recommendList.count * PROBLEM_LEFT;
     return height;
 }
 
@@ -60,6 +60,11 @@
     [super awakeFromNib];
     // Initialization code
     [self.url.layer setCornerRadius:8];
+//    self.url.layer.shadowColor = [UIColor blackColor].CGColor;//shadowColor阴影颜色
+//    self.url.layer.shadowOffset = CGSizeMake(4,4);//shadowOffset阴影偏移,x向右偏移4，y向下偏移4，默认(0, -3),这个跟shadowRadius配合使用
+//    self.url.layer.shadowOpacity = 0.8;//阴影透明度，默认0
+//    self.url.layer.shadowRadius = 4;//阴影半径，默认3
+
     
 }
 

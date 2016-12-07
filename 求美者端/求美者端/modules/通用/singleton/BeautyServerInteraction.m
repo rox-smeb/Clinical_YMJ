@@ -136,6 +136,26 @@ static BeautyServerInteraction *SINGLETON = nil;
 }
 
 
+#pragma mark -  获取项目剩余时间
+
+- (void)findProjectTimeWithPId:(NSString*)pId
+                 responseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    [param addParam:pId forKey:@"pId"];
+        
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"findProjectTime"]
+             method:GET
+             params:param
+      infoMakeBlock:^id(YBServerResponseInfo *info, BOOL *ret) {
+          
+          NSString* date = [info.data objectForKey:@"date"];
+          return date;
+      }
+      responseBlock:responseBlock];
+}
+
+
 @end
 
 

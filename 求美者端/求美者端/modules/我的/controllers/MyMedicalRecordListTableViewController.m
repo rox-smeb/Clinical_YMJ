@@ -18,11 +18,13 @@
 @end
 
 @implementation MyMedicalRecordListTableViewController
-+(instancetype)viewController
+
++ (instancetype)viewController
 {
     MyMedicalRecordListTableViewController* ctrl=[[self class] viewControllerWithStoryboardName:@"Mine"];
     return ctrl;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];

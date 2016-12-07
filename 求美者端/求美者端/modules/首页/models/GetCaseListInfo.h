@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GetCaseListInfo : NSObject
+
 @property(nonatomic,strong)NSString* cId;           //案例编号
 @property(nonatomic,strong)NSString* dId;           //医生编号
 @property(nonatomic,strong)NSString* dName;         //医生名称
@@ -17,4 +18,5 @@
 @property(nonatomic,strong)NSString* cAfterPic;     //案例after图片
 @property(nonatomic,strong)NSString* cDetails;      //案例详情
 @property(nonatomic,strong)NSString* cViewNumber;   //案例查看数
+
 @end

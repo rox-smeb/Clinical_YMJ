@@ -31,4 +31,26 @@ static MineServerInteraction *SINGLETON = nil;
     return self;
 }
 
+#pragma mark - 获取用户关注专家列表
+
+- (void)findFollowExpertWithUid:(NSString*)uid
+                           ukey:(NSString*)ukey
+                        sort_id:(NSString*)sort_id
+                         newset:(NSString*)newset
+                  responseBlock:(YBResponseBlock)responseBlock
+{
+    NSMutableDictionary* param = [NSMutableDictionary dictionary];
+    [param addParam:uid forKey:@"uid"];
+    [param addParam:ukey forKey:@"ukey"];
+    [param addParam:sort_id forKey:@"sort_id"];
+    [param addParam:newset forKey:@"newset"];
+    
+    [self invokeApi:[AppURL URLWithPath:@"Common" method:@"findFollowExpert"]
+             method:GET
+       responseType:RESPONSE_INFO_LIST
+          itemClass:[ExpertInfo class]
+             params:param
+      responseBlock:responseBlock];
+}
+
 @end

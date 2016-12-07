@@ -75,7 +75,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
+    //[self.navigationController.navigationBar setHidden:YES];
+    [self setNavigationBarAlpha:0.0f];
+
 }
 
 - (void)viewDidLoad
@@ -90,11 +92,23 @@
 {
     [super viewDidAppear:animated];
     
+    if (self.fakeNavBar.superview != nil)
+    {
+        [self.fakeNavBar removeFromSuperview];
+    }
+    
     // 保证JTNumberScrollAnimatedView正确的layout
     dispatch_once(&_onceStartCountLabelAnimate, ^{
         
         [self.totalCountLabel startAnimation];
     });
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self setNavigationBarAlpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -194,7 +208,7 @@
                 CGFloat width = [self.navigationController.navigationBar width];
                 CGFloat height = statusHeight + [self.navigationController.navigationBar height];
                 self.fakeNavBar = [[UIView alloc] initWithFrame:CGRectMake(0, -height, width, height)];
-                self.fakeNavBar.backgroundColor = RGB(241, 249, 249);
+                self.fakeNavBar.backgroundColor = RGB(242, 249, 249);
             }
             
             if (self.fakeNavBar.superview != nil)
@@ -267,7 +281,6 @@
 // 我要求美
 - (void)didSelectWantPretty
 {
-    [self.navigationController.navigationBar setHidden:NO];
     BecomeBeautifulViewController *becomeVC = [BecomeBeautifulViewController viewController];
     [self.navigationController pushViewController:becomeVC animated:YES];
 }
@@ -275,7 +288,6 @@
 // 失败手术修复
 - (void)didSelectSurgeryRepair
 {
-    [self.navigationController.navigationBar setHidden:NO];
     FailRepairViewController* ctrl=[FailRepairViewController viewController];
     [self.navigationController pushViewController:ctrl animated:YES];
     
@@ -284,7 +296,6 @@
 // 直通韩国
 - (void)didSelectGoToKorea
 {
-    [self.navigationController.navigationBar setHidden:NO];
     ToKoreaViewController* ctrl=[ToKoreaViewController viewController];
     [self.navigationController pushViewController:ctrl animated:YES];
 }
@@ -298,7 +309,6 @@
 // 会诊中心
 - (void)didSelectConsultationCenter
 {
-    [self.navigationController.navigationBar setHidden:NO];
     ConsultationCollectionViewController *consulationVC=[ConsultationCollectionViewController viewController];
     [self.navigationController pushViewController:consulationVC animated:YES];
 }
@@ -306,7 +316,6 @@
 // 委托保障
 - (void)didSelectConsignProtection
 {
-    [self.navigationController.navigationBar setHidden:NO];
     GuaranteeOrderViewController *guaranteeTVC = [GuaranteeOrderViewController viewController];
     [self.navigationController pushViewController:guaranteeTVC animated:YES];
 }
@@ -314,7 +323,6 @@
 // 争议调解
 - (void)didSelectDisputeMediation
 {
-    [self.navigationController.navigationBar setHidden:NO];
     DisputeResolveViewController *disputeVC=[DisputeResolveViewController viewController];
     [self.navigationController pushViewController:disputeVC animated:YES];
 }

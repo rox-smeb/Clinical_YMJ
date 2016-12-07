@@ -105,4 +105,16 @@
                   responseBlock:(YBResponseBlock)responseBlock;
 
 
+#pragma mark -  获取项目剩余时间
+
+/**
+ *  获取机构列表
+ *
+ *  @param pid                  项目编号
+ *  @param responseBlock        成功回调
+ */
+- (void)findProjectTimeWithPId:(NSString*)pId
+                 responseBlock:(YBResponseBlock)responseBlock;
+
+
 @end

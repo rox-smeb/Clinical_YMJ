@@ -68,7 +68,7 @@ do                                                   \
 #define COMMON_COLOR                                (UIColorMake(12, 91, 200))              // APP主色调
 //#define COMMON_COLOR                                ([UIColor whiteColor])              // APP主色调
 
-#define COMMON_COLOR1                               (UIColorMake(12, 91, 200))              // APP主色调1
+#define COMMON_COLOR1                               (UIColorMake(242, 249, 249))              // APP主色调1
 #define COMMON_TEXT_COLOR                           (UIColorMake(80, 80, 80))               // APP文字颜色
 #define STRING_LOADING                              (@"正在加载...")
 #define STRING_PROCESSING                           (@"正在处理...")

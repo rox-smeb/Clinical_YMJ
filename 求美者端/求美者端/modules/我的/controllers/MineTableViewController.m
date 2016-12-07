@@ -12,6 +12,9 @@
 #import "UserInfo.h"
 #import "ImagePickerManager.h"
 #import "MyMedicalRecordListTableViewController.h"
+#import "CollectionDoctorTableViewController.h"
+
+
 #define CAMERA_IMAGE_MAX_SIZE      (400)
 
 @interface MineTableViewController () <UIScrollViewDelegate,
@@ -59,6 +62,13 @@
     }
     
     [self updateUI];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self setNavigationBarAlpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning
@@ -156,7 +166,7 @@
                 CGFloat width = [self.navigationController.navigationBar width];
                 CGFloat height = statusHeight + [self.navigationController.navigationBar height];
                 self.fakeNavBar = [[UIView alloc] initWithFrame:CGRectMake(0, -height, width, height)];
-                self.fakeNavBar.backgroundColor = COMMON_COLOR;
+                self.fakeNavBar.backgroundColor = COMMON_COLOR1;
             }
             
             if (self.fakeNavBar.superview != nil)
@@ -222,6 +232,11 @@
     else if([cell.restorationIdentifier isEqualToString:@"我的病历"])
     {
         MyMedicalRecordListTableViewController* ctrl=[MyMedicalRecordListTableViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"关注医生"])
+    {
+        CollectionDoctorTableViewController* ctrl=[CollectionDoctorTableViewController viewController];
         [self.navigationController pushViewController:ctrl animated:YES];
     }
 }

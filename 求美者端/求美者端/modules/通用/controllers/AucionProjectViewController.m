@@ -10,6 +10,7 @@
 #import "YBCommonKit/KDCycleBannerView.h"
 #import "VerDoctorWebTableViewController.h"
 #import "VerDoctorWebViewController.h"
+#import "BeautyServerInteraction.h"
 
 #define DEFAULT_SCOLL_IMAGE                   ([UIImage imageNamed:@"topbg"]);
 
@@ -36,6 +37,13 @@
     return ctrl;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.secondsCountDown = 0;
+    [self loadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -53,16 +61,36 @@
     self.topImage.datasource = self;
     self.topImage.delegate = self;
     self.topImage.autoPlayTimeInterval = 5;
-    self.date.text = [self timeFormatted:86400];
-    _secondsCountDown = 86400;//60秒倒计时
+    
+    self.date.text = [self timeFormatted:_secondsCountDown];
     _countDownTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeFireMethod) userInfo:nil repeats:YES];
-
 }
 
--(void)timeFireMethod{
+- (void)loadData
+{
+    @weakify_self;
+    YB_RESPONSE_BLOCK_EX(block, NSString*)
+    {
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        
+        if ([response success])
+        {
+            weakSelf.secondsCountDown = [dataOrList intValue];
+        }
+        else
+        {
+            [response showHUD];
+        }
+    };
+    
+    [[BeautyServerInteraction sharedInstance] findProjectTimeWithPId:self.auctionInfo.apId
+                                                       responseBlock:block];
+}
+
+- (void)timeFireMethod{
     _secondsCountDown--;
     self.date.text = [self timeFormatted:_secondsCountDown];
-    if(_secondsCountDown==0){
+    if(_secondsCountDown == 0){
         [_countDownTimer invalidate];
     }
     

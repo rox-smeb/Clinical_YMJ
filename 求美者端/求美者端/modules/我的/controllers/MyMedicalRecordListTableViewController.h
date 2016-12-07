@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MyMedicalRecordListTableViewController : UITableViewController
-+(instancetype)viewController;
+
++ (instancetype)viewController;
+
 @end

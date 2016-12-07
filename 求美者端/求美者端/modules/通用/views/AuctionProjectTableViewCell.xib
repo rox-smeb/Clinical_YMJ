@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="320" height="152"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-6p-Gu2">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zjlb01" translatesAutoresizingMaskIntoConstraints="NO" id="nTg-6p-Gu2">
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="4yD-uo-Fon"/>
                             <constraint firstAttribute="width" constant="80" id="GpH-bm-L1V"/>
@@ -148,6 +148,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="head" width="259" height="260"/>
+        <image name="zjlb01" width="159" height="159"/>
     </resources>
 </document>

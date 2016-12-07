@@ -414,7 +414,7 @@
     {
         if (indexPath.row < [self.expertData count])
         {
-            ExpertInfo *info = [self.auctionProData objectAtIndex:indexPath.row];
+            ExpertInfo *info = [self.expertData objectAtIndex:indexPath.row];
             VerDoctorWebViewController *verVC = [VerDoctorWebViewController viewControllerWithDid:info.eId];
             [self.navigationController pushViewController:verVC animated:YES];
         }
