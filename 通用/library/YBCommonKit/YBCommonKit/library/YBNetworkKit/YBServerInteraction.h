@@ -77,6 +77,9 @@ typedef id   (^MakeResponseInfoBlock)(YBServerResponseInfo* info, BOOL *ret);   
 @property (strong, nonatomic) id                   userObject;                          // 用户自定义数据
 @property (strong, nonatomic) NSError              * error;                             // 错误信息
 
++ (instancetype)responseWithOperation:(MKNetworkOperation*)operation error:(NSError*)error;
++ (instancetype)responseWithOperation:(MKNetworkOperation*)operation error:(NSError*)error infoBlock:(MakeResponseInfoBlock)block;
+
 - (BOOL)success;
 - (void)showHUD;
 

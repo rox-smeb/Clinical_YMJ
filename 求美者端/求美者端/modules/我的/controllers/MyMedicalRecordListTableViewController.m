@@ -11,6 +11,7 @@
 #import "UserInfo.h"
 #import "MyMedicalRecordListInfo.h"
 #import "MyServerInteraction.h"
+
 @interface MyMedicalRecordListTableViewController ()<UITableViewDelegate,
                                                     UITableViewDataSource>
 @property (strong, nonatomic) NSMutableArray *dataSource;
@@ -105,12 +106,12 @@
     @weakify_self;
     YB_RESPONSE_BLOCK_EX(block, NSArray<MyMedicalRecordListInfo*>*)
     {
+        [weakSelf.tableView nlFooterEndRefresh];
+
         if ([response isCachedResponse])
         {
             return;
         }
-        
-        [weakSelf.tableView nlFooterEndRefresh];
         
         if ([response success])
         {

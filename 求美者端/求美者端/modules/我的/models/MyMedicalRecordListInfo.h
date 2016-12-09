@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MyMedicalRecordListInfo : NSObject
+
 @property(nonatomic,strong)NSString* rId;   //病历编号
 @property(nonatomic,strong)NSString* time;  //手术时间
 @property(nonatomic,strong)NSString* project;//手术项目

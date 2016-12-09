@@ -1,18 +1,24 @@
 //
 //  MineTableViewController.m
 //  求美者端
-//
+//  1234567890-·    qwertyuiop[
 //  Created by AnYanbo on 16/8/9.
 //  Copyright © 2016年 AnYanbo. All rights reserved.
 //
 
 #import "MineTableViewController.h"
+#import "MineServerInteraction.h"
 #import "MineHeaderView.h"
 #import "NotificationsDefine.h"
 #import "UserInfo.h"
 #import "ImagePickerManager.h"
 #import "MyMedicalRecordListTableViewController.h"
 #import "CollectionDoctorTableViewController.h"
+#import "MyQuestionViewController.h"
+#import "MyDamandTableViewController.h"
+#import "MyAuctionIViewController.h"
+#import "GetPolicyViewController.h"
+#import "FindMyDisputeViewController.h"
 
 
 #define CAMERA_IMAGE_MAX_SIZE      (400)
@@ -50,6 +56,8 @@
     [super viewWillAppear:animated];
     
     [self setNavigationBarAlpha:0.0f];
+    //[self.navigationController.navigationBar setHidden:YES];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -69,6 +77,7 @@
     [super viewDidDisappear:animated];
     
     [self setNavigationBarAlpha:1.0f];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -131,6 +140,46 @@
 - (void)uploadImage:(UIImage*)image
 {
     NSLog(@"1");
+    UserInfo* info = [UserInfo currentUser];
+    NSString* uid = info.uid;
+    
+    @weakify_self;
+    YB_RESPONSE_BLOCK_EX(block, NSString*)
+    {
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        [response showHUD];
+    
+        if ([response success])
+        {
+            // 更新URL
+            if ([[UserInfo currentUser] updateHeadURL:dataOrList])
+            {
+                // URL绑定
+                NSURL* url = [NSURL URLWithString:dataOrList];
+                [[SDWebImageManager sharedManager] saveImageToCache:image forURL:url];
+            }
+      
+            // 更新UI
+            [weakSelf updateUI];
+        }
+    };
+    
+    MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.yOffset = self.tableView.contentOffset.y;
+    hud.labelText = @"正在上传...";
+    
+    [[MineServerInteraction sharedInstance] InfoEditImageWithUid:uid
+                                                            ukey:info.ukey
+                                                          oldPwd:@""
+                                                          newPwd:@""
+                                                            name:@""
+                                                        fileList:image
+                                                   progressBlock:^(double progress){
+        
+                                                       hud.labelText = [NSString stringWithFormat:@"已上传:%0.1f%%", progress * 100.0f];
+                                                   }
+                                                   responseBlock:block];
+
 }
 
 #pragma mark - ImagePickerManagerDelegate
@@ -237,6 +286,31 @@
     else if([cell.restorationIdentifier isEqualToString:@"关注医生"])
     {
         CollectionDoctorTableViewController* ctrl=[CollectionDoctorTableViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的答疑"])
+    {
+        MyQuestionViewController* ctrl=[MyQuestionViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的需求"])
+    {
+        MyDamandTableViewController* ctrl=[MyDamandTableViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的竞拍"])
+    {
+        MyAuctionIViewController* ctrl=[MyAuctionIViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的保单"])
+    {
+        GetPolicyViewController* ctrl=[GetPolicyViewController viewController];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    else if([cell.restorationIdentifier isEqualToString:@"我的纠纷"])
+    {
+        FindMyDisputeViewController* ctrl=[FindMyDisputeViewController viewController];
         [self.navigationController pushViewController:ctrl animated:YES];
     }
 }

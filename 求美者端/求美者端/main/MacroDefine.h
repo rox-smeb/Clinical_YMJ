@@ -58,7 +58,7 @@ do                                                   \
 #define DEFAULT_IMAGE                               ([UIImage imageNamed:DEFAULT_IMAGE_NAME])
 #define DEFAULT_HEAD_IMAGE_NAME                     (@"head")
 #define DEFAULT_HEAD_IMAGE                          ([UIImage imageNamed:DEFAULT_HEAD_IMAGE_NAME])
-#define DEFAULT_HEAD_IMAGE_NAME1                    (@"默认头像1")
+#define DEFAULT_HEAD_IMAGE_NAME1                    (@"默认头像")
 #define DEFAULT_HEAD_IMAGE1                         ([UIImage imageNamed:DEFAULT_HEAD_IMAGE_NAME1])
 
 #define DEFAULT_AREA_VOICE_DOWNLOAD_DIR             (@"Download")                           // 景区语音下载位置
